@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Error from '../errors/error';
 
 export default class SignupForm extends React.Component {
 
@@ -44,6 +45,11 @@ export default class SignupForm extends React.Component {
           <button type="submit">Sign up</button>
         </form>
         <Link to="/login">Login</Link>
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <Error error={error} />
+          ))}
+        </ul>
       </div>
     )
   }
