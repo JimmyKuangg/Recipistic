@@ -26,7 +26,7 @@ export const login = user => dispatch => (
 
 export const logout = () => dispatch => (
   SessionApiUtil.logout()
-  .then(() => dispatch(logoutCurrentuser()))
+  .then(() => dispatch(logoutCurrentUser()))
 )
 
 export const signup = user => dispatch => (

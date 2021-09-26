@@ -7,6 +7,7 @@ export default class Navbar extends React.Component {
   }
 
   fetchButtons(){
+    console.log(this.props.currentUser);
     if (!this.props.currentUser){
       return (
         <div>
@@ -15,7 +16,9 @@ export default class Navbar extends React.Component {
         </div>
       )
     } else {
-      return <button onClick={this.props.logout}>Logout</button>
+      return(
+        <button onClick={this.props.logout}>Logout</button>
+      )
     }
   }
 
