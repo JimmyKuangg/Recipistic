@@ -2,8 +2,7 @@ import React from 'react'
 import NavbarContainer from './components/navbar/navbar_container';
 import { Route } from 'react-router';
 import { AuthRoute } from './util/route_util';
-import LoginFormContainer from './components/session/login_container';
-import SignupFormContainer from './components/user/signup_container';
+import Modal from './components/modal/modal';
 
 const App = () => (
   <div>
@@ -12,8 +11,8 @@ const App = () => (
       <NavbarContainer />
     </header>
 
-    <AuthRoute path="/login" component={LoginFormContainer} />
-    <AuthRoute path="/signup" component={SignupFormContainer} />
+    <AuthRoute path="/login" component={Modal} />
+    <AuthRoute path="/signup" component={Modal} />
   </div>
 )
 

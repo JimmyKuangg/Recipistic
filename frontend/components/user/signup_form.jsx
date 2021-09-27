@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Error from '../errors/error';
+import LoginContainer from '../session/login_container';
 
 export default class SignupForm extends React.Component {
 
@@ -28,26 +29,19 @@ export default class SignupForm extends React.Component {
   render() {
     return (
       <div>
-        <h2>Sign up</h2>
+        <h2>Recipistic</h2>
         <form onSubmit={this.handleSubmit}>
-          <label>Username:
-            <input type="text" value={this.state.username} onChange={this.updateField('username')} />
-          </label>
+          <input type="text" value={this.state.username} placeholder="USERNAME" onChange={this.updateField('username')} />
           <br/>
-          <label>Email:
-            <input type="email" value={this.state.email} onChange={this.updateField('email')} />
-          </label>
+          <input type="email" value={this.state.email} placeholder="EMAIL" onChange={this.updateField('email')} />
           <br/>
-          <label>Password:
-            <input type="password" value={this.state.password} onChange={this.updateField('password')} />
-          </label>
+          <input type="password" value={this.state.password} placeholder="PASSWORD" onChange={this.updateField('password')} />
           <br/>
           <button type="submit">Sign up</button>
         </form>
-        <Link to="/login">Login</Link>
         <ul>
           {this.props.errors.map((error, i) => (
-            <Error error={error} />
+            <Error error={error} key={i}/>
           ))}
         </ul>
       </div>

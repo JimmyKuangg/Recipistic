@@ -4,9 +4,34 @@ body {
   background-color: #f1faee;
 }
 
-
-main h1{
+main h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 50px;
   color: red;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-form {
+  position: absolute;
+  left:30%;
+  top:25%;
+  color: black;
+  font-size: 20px;
+  background-color: white;
+  width: 40%;
+  height: 70%;
+}
+
+.text-input {
+  height: 30px;
+  width: 200px;
+  font-size: 20px;
 }
