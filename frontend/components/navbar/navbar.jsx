@@ -1,5 +1,4 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Modal from '../modal/modal';
 
 export default class Navbar extends React.Component {
@@ -11,11 +10,12 @@ export default class Navbar extends React.Component {
       showModal: false
     }
     
-    this.fetchSignUp = this.fetchSignUp.bind(this);
+    this.fetchSignup = this.fetchSignup.bind(this);
     this.fetchLogin = this.fetchLogin.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
-  fetchSignUp() {
+  fetchSignup() {
     this.setState({formType: 'signup', showModal: true});
   }
 
@@ -23,11 +23,15 @@ export default class Navbar extends React.Component {
     this.setState({formType: 'login', showModal: true});
   }
 
+  closeModal() {
+    this.setState({formType: '', showModal: false});
+  }
+
   fetchButtons(){
     if (!this.props.currentUser){
       return (
-        <div>
-          <button onClick={this.fetchSignUp}>Sign Up</button>
+        <div className="session-buttons">
+          <button onClick={this.fetchSignup}>Sign Up</button>
           <button onClick={this.fetchLogin}>Login</button>
         </div>
       )
@@ -42,7 +46,14 @@ export default class Navbar extends React.Component {
     return (
       <div>
         {this.fetchButtons()}
-        {this.state.showModal ? <Modal formType={this.props.formType} /> : ''}
+        {this.state.showModal ? 
+        <Modal 
+          formType={this.state.formType} 
+          closeModal={this.closeModal}
+          fetchSignup={this.fetchSignup}
+          fetchLogin={this.fetchLogin}
+        /> 
+        : ''}
       </div>
     )
   }

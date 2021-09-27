@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import Error from '../errors/error';
 
 export default class LoginForm extends React.Component {
@@ -13,11 +12,26 @@ export default class LoginForm extends React.Component {
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
   }
 
   handleSubmit(e) { 
     e.preventDefault();
-    this.props.login(this.state);
+    this.props.login(this.state)
+      .then(() => this.props.closeModal());
+  }
+
+  demoLogin(e) {
+    e.preventDefault();
+    let username = 'boneappleteeth';
+    let password = 'proshef123';
+    this.props.login({
+      username, password
+    }).then(() => this.props.closeModal());
   }
 
   updateField(field){
@@ -26,11 +40,11 @@ export default class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="modal-text">
         <h2>Recipistic</h2>
         <form onSubmit={this.handleSubmit}>
           <input 
-            className="text-input"
+            id="login-username"
             type="text" 
             value={this.state.username} 
             placeholder="USERNAME" 
@@ -38,7 +52,7 @@ export default class LoginForm extends React.Component {
           />
           <br/>
           <input 
-            className="text-input"
+            id="login-password"
             type="password" 
             value={this.state.password} 
             placeholder="PASSWORD" 
@@ -47,7 +61,10 @@ export default class LoginForm extends React.Component {
           <br/>
           <button type="submit">Login</button>
         </form>
-        <h3>Don't have an account?</h3><Link to="/signup">Sign up</Link>
+        <div className="form-buttons">
+          <button onClick={this.demoLogin}>Demo Login</button>
+          <button onClick={this.props.fetchSignup}>Sign up instead</button>
+        </div>
         <ul>
           {this.props.errors.map((error, i) => (
             <Error error={error} key={i}/>
