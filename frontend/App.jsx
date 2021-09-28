@@ -1,17 +1,20 @@
 import React from 'react'
 import NavbarContainer from './components/navbar/navbar_container';
-import { Route } from 'react-router';
-import { AuthRoute } from './util/route_util';
-import Modal from './components/modal/modal';
+import Modal from './components/ui/modal';
+import { Route, Switch, Redirect } from 'react-router';
+import RoutingError from './components/errors/routing_error';
+import Home from './components/pages/home';
+
 
 const App = () => (
   <div>
     <Modal />
-    <header>
-      <NavbarContainer />
-    </header>
+    <NavbarContainer />
 
-    <div className="splash"/>
+    <Switch>
+      <Route exact path='/' component={Home} />
+      <Route component={RoutingError} />
+    </Switch>
   </div>
 )
 

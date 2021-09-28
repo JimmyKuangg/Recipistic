@@ -59,6 +59,11 @@ export default class LoginForm extends React.Component {
             onChange={this.updateField('password')} 
           />
           <br/>
+          <ul>
+            {this.props.errors.map((error, i) => (
+              <Error error={error} key={i}/>
+            ))}
+          </ul>
           <button type="submit">Login</button>
         </form>
         <div className="form-buttons">
@@ -68,11 +73,6 @@ export default class LoginForm extends React.Component {
             <button className="other-form" onClick={this.props.openOther}>Sign up instead</button>
           </div>
         </div>
-        <ul>
-          {this.props.errors.map((error, i) => (
-            <Error error={error} key={i}/>
-          ))}
-        </ul>
         <button id="close-modal" onClick={this.props.closeModal}>X</button>
       </div>
     )

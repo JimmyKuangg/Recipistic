@@ -58,17 +58,17 @@ export default class SignupForm extends React.Component {
             onChange={this.updateField('password')} 
           />
           <br/>
+          <ul>
+            {this.props.errors.map((error, i) => (
+              <Error error={error} key={i}/>
+            ))}
+          </ul>
           <button type="submit">Sign up</button>
         </form>
         <div className="other-form-container">
           <h3>Already have an account?</h3>
           <button className="other-form" onClick={this.props.openOther}>Login</button>
         </div>
-        <ul>
-          {this.props.errors.map((error, i) => (
-            <Error error={error} key={i}/>
-          ))}
-        </ul>
         <button id="close-modal" onClick={this.props.closeModal}>X</button>
       </div>
     )

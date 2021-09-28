@@ -19,6 +19,19 @@ body {
   text-align: center;
 }
 
+#navbar > ul > li > button {
+  border: none;
+  background: none;
+}
+
+#navbar > ul > li > button:hover {
+  cursor: pointer;
+}
+
+.material-icons {
+  font-size: 35px;
+}
+
 .session-buttons {
   height: 30px;
   padding-top: 10px;
@@ -105,6 +118,7 @@ main h1 {
 .modal-text ul {
   display: flex;
   flex-direction: column;
+  padding-top: 10px;
 }
 
 .modal-text ul li {
@@ -156,6 +170,7 @@ main h1 {
   border: none;
   font-size: 20px;
   margin: 10px;
+  transition: color 0.25s;
 }
 
 #close-modal:hover {
