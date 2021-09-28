@@ -6,7 +6,7 @@ export default class SignupForm extends React.Component {
   constructor(props){
     super(props);
 
-    this.state = {
+  this.state = {
       username: '',
       email: '',
       password: '',
@@ -69,7 +69,7 @@ export default class SignupForm extends React.Component {
           <h3>Already have an account?</h3>
           <button className="other-form" onClick={this.props.openOther}>Login</button>
         </div>
-        <button id="close-modal" onClick={this.props.closeModal}>X</button>
+        <button className="close-form" onClick={this.props.closeModal}>X</button>
       </div>
     )
   }

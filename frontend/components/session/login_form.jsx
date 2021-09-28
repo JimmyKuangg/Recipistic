@@ -73,7 +73,7 @@ export default class LoginForm extends React.Component {
             <button className="other-form" onClick={this.props.openOther}>Sign up instead</button>
           </div>
         </div>
-        <button id="close-modal" onClick={this.props.closeModal}>X</button>
+        <button className="close-form" onClick={this.props.closeModal}>X</button>
       </div>
     )
   }
