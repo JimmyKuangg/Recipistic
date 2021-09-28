@@ -2,20 +2,16 @@ import React from 'react'
 import NavbarContainer from './components/navbar/navbar_container';
 import { Route } from 'react-router';
 import { AuthRoute } from './util/route_util';
+import Modal from './components/modal/modal';
 
 const App = () => (
   <div>
-    <header id="navbar">
-      <ul>
-        <li><NavbarContainer /></li>
-        <li><h1>Recipistic</h1></li>
-        <li><h1>Hyperlinks</h1></li>
-      </ul>
+    <Modal />
+    <header>
+      <NavbarContainer />
     </header>
-    <div className="splash"/>
 
-    {/* <AuthRoute path="/login" component={Modal} />
-    <AuthRoute path="/signup" component={Modal} /> */}
+    <div className="splash"/>
   </div>
 )
 

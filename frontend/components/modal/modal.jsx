@@ -1,31 +1,42 @@
 import React from 'react';
+import { closeModal } from '../../actions/modal_actions';
+import { connect } from 'react-redux';
 import LoginFormContainer from '../session/login_container';
 import SignupFormContainer from '../user/signup_container';
 
-export default class Modal extends React.Component {
-  
-  constructor(props) {
-    super(props);
+const mapStateToProps = state => ({
+  modal: state.ui.modal
+})
 
-    this.fetchForm = this.fetchForm.bind(this);
+const mapDispatchToProps = dispatch => ({
+  closeModal: () => dispatch(closeModal())
+})
+
+function Modal({modal, closeModal}) {
+  if (!modal) {
+    return null;
   }
 
-  fetchForm() {
-    if (this.props.formType === 'signup'){
-      return <SignupFormContainer closeModal={this.props.closeModal} fetchLogin={this.props.fetchLogin}/>
-    } else if (this.props.formType === 'login'){
-      return <LoginFormContainer closeModal={this.props.closeModal} fetchSignup={this.props.fetchSignup}/>
-    }
+  let component;
+
+  switch (modal) {
+    case 'login': 
+      component = <LoginFormContainer />
+      break;
+    case 'signup':
+      component = <SignupFormContainer />
+      break;
+    default: 
+      return null;
   }
 
-  render() {
-    return (
-      <div className="modal">
-        <div className="modal-form">
-          {this.fetchForm()}
-          <button id="close-modal" onClick={this.props.closeModal}>X</button>
-        </div>
+  return (
+    <div className="modal" onClick={closeModal}>
+      <div className="modal-form" onClick={e => e.stopPropagation()}>
+        { component }
       </div>
-    )
-  }
+    </div>
+  );
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);

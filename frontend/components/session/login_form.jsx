@@ -62,14 +62,18 @@ export default class LoginForm extends React.Component {
           <button type="submit">Login</button>
         </form>
         <div className="form-buttons">
-          <button onClick={this.demoLogin}>Demo Login</button>
-          <button onClick={this.props.fetchSignup}>Sign up instead</button>
+          <button className="demo-login" onClick={this.demoLogin}>Demo Login</button>
+          <div className="other-form-container">
+            <h3>Not registered yet?</h3>
+            <button className="other-form" onClick={this.props.openOther}>Sign up instead</button>
+          </div>
         </div>
         <ul>
           {this.props.errors.map((error, i) => (
             <Error error={error} key={i}/>
           ))}
         </ul>
+        <button id="close-modal" onClick={this.props.closeModal}>X</button>
       </div>
     )
   }

@@ -1,38 +1,16 @@
 import React from 'react';
-import Modal from '../modal/modal';
 
 export default class Navbar extends React.Component {
   constructor(props){
     super(props);
-
-    this.state = {
-      formType: '',
-      showModal: false
-    }
-    
-    this.fetchSignup = this.fetchSignup.bind(this);
-    this.fetchLogin = this.fetchLogin.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-  }
-
-  fetchSignup() {
-    this.setState({formType: 'signup', showModal: true});
-  }
-
-  fetchLogin() {
-    this.setState({formType: 'login', showModal: true});
-  }
-
-  closeModal() {
-    this.setState({formType: '', showModal: false});
   }
 
   fetchButtons(){
     if (!this.props.currentUser){
       return (
         <div className="session-buttons">
-          <button onClick={this.fetchSignup}>Sign Up</button>
-          <button onClick={this.fetchLogin}>Login</button>
+          <button onClick={() => this.props.openModal('signup')}>Sign Up</button>
+          <button onClick={() => this.props.openModal('login')}>Login</button>
         </div>
       )
     } else {
@@ -44,16 +22,12 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.fetchButtons()}
-        {this.state.showModal ? 
-        <Modal 
-          formType={this.state.formType} 
-          closeModal={this.closeModal}
-          fetchSignup={this.fetchSignup}
-          fetchLogin={this.fetchLogin}
-        /> 
-        : ''}
+      <div id="navbar">
+        <ul>
+          <li>{this.fetchButtons()}</li>
+          <li><h1>Recipistic</h1></li>
+          <li><h1>Hyperlinks</h1></li>
+        </ul>
       </div>
     )
   }
