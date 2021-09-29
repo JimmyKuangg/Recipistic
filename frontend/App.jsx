@@ -5,7 +5,7 @@ import { Route, Switch, Redirect } from 'react-router';
 import RoutingError from './components/errors/routing_error';
 import Home from './components/pages/home';
 import Sidemenu from './components/ui/sidemenu';
-import UserShowContainer from './components/user/user_show_container';
+import UserShowContainer from './components/user/show/user_show_container';
 
 
 const App = () => (
@@ -14,7 +14,7 @@ const App = () => (
     <Sidemenu />
     <NavbarContainer />
     <Switch>
-      <Route path="/user/:id" component={UserShowContainer} />
+      <Route exact path="/user/:id" component={UserShowContainer} />
       <Route exact path='/' component={Home} />
       <Route component={RoutingError} />
     </Switch>

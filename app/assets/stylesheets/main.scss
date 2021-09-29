@@ -25,7 +25,11 @@ body {
 }
 
 #logo {
-  line-height: 50px;;
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  color: red;
+  max-height: 50px;
+  line-height: 50px;
 }
 
 #navbar > ul > li > button:hover {
@@ -111,21 +115,32 @@ body {
   padding-top: 75px;
 }
 
-#sidemenu-links > li{
+.linkto {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+  transition: color 0.25s;
 }
 
-#logout {
+.linkto:hover {
+  color: red;
+}
+
+.logout {
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
+  margin: 5px;
   background: none;
   border: none;
   color: white;
   transition: color 0.25s;
 }
 
-#logout:hover {
+.logout:hover {
   color: red;
+  cursor: pointer;
 }
 
 .splash {
@@ -134,13 +149,6 @@ body {
   background-size: cover, contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-main h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 40px;
-  color: red;
-  max-height: 50px;
 }
 
 .modal {

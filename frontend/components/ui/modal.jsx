@@ -2,7 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session/login_container';
-import SignupFormContainer from '../user/signup_container';
+import SignupFormContainer from '../user/signup/signup_container';
 
 const mapStateToProps = state => ({
   modal: state.ui.modal

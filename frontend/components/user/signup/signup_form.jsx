@@ -1,5 +1,5 @@
 import React from 'react'
-import Error from '../errors/error';
+import Error from '../../errors/error';
 
 export default class SignupForm extends React.Component {
 
