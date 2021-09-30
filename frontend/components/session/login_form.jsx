@@ -27,8 +27,8 @@ export default class LoginForm extends React.Component {
 
   demoLogin(e) {
     e.preventDefault();
-    let username = 'boneappleteeth';
-    let password = 'proshef123';
+    let username = 'demouser';
+    let password = 'DeMoUsEr555';
     this.props.login({
       username, password
     }).then(() => this.props.closeModal());

@@ -29,4 +29,12 @@ class User < ApplicationRecord
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64
   end
+
+  has_many :favorites,  
+    foreign_key: :user_id,
+    class_name: :Favorite
+
+  has_many :recipes,
+    foreign_key: :user_id,
+    class_name: :Recipe
 end

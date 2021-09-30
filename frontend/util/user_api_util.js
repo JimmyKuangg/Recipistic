@@ -12,3 +12,10 @@ export const getUser = userId => (
     url: `/api/users/${userId}`
   })
 )
+
+export const getFavorites = userId => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/users/${userId}/favorites`
+  })
+)

@@ -29,7 +29,7 @@ function Sidemenu({sidemenu, loggedIn, currentUserId, logout, closeSidemenu}) {
           <li>
             <Link 
               className="linkto" 
-              to={`/user/${currentUserId}`} 
+              to={`/users/${currentUserId}`} 
               onClick={closeSidemenu}
             >YOUR PROFILE
             </Link>
