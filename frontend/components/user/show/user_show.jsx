@@ -13,7 +13,6 @@ export default class UserShow extends React.Component {
   componentDidUpdate(prevProps) {
     if (this.props.match.params.id !== prevProps.match.params.id) {
       this.props.findUser(this.props.match.params.id);
-      this.props.receiveRecipes(this.props.userId);
     }
   }
 
@@ -25,11 +24,11 @@ export default class UserShow extends React.Component {
     return (
       <div id="user-show">
         <header id="user-header"> 
-          <h2>User image will show up here</h2> 
+          <h2><i className="fas fa-hamburger"></i></h2> 
           <h2>{this.props.user.username}</h2>
         </header>
         {this.props.user.bio ? <p>{this.props.user.bio}</p> : ''}
-        <UserRecipesContainer userId={this.props.user.id}/>
+        <UserRecipesContainer username={this.props.user.username} />
       </div>
     )
   }

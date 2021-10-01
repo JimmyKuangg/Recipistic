@@ -14,4 +14,15 @@ class Api::RecipesController < ApplicationController
     end
   end
 
+  def show
+    @recipe = Recipe.find_by(id: params[:id])
+    @ingredients = @recipe.ingredients
+
+    if @recipe
+      render :show
+    else
+      render json: ["No recipe found with that id"]
+    end
+  end
+  
 end

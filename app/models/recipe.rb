@@ -7,4 +7,9 @@ class Recipe < ApplicationRecord
   belongs_to :user,
     foreign_key: :user_id,
     class_name: :User
+
+  has_many :ingredients,
+    foreign_key: :recipe_id,
+    class_name: :Ingredient,
+    dependent: :destroy
 end

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { receiveRecipes, clearRecipes } from '../../../actions/recipe_actions';
+import { receiveRecipes } from '../../../actions/recipe_actions';
 import UserRecipes from './user_recipes';
 
 const mapStateToprops =  state => ({

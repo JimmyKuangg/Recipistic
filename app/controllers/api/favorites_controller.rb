@@ -1,9 +1,9 @@
 class Api::FavoritesController < ApplicationController
   def index
-    @favorites = Favorite.where(user_id: params[:user_id])
+    @favorites = current_user.favorites
 
     if @favorites 
-      render :show
+      render :index
     else
       render json: ["No favorites found"]
     end

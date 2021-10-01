@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  font-size: 20px;
 }
 
 #user-header {
@@ -13,11 +14,36 @@
   flex-direction: column;
   align-items: center;
   font-size: 35px;
-  padding-top: 200px;
+  padding-top: 100px;
+  min-width: 800px;
 } 
+
+i {
+  font-size: 250px;
+}
 
 p {
   padding-top: 10px;
   font-size: 22px;
 }
 
+#user-recipe-container {
+  padding-top: 20px;
+  text-align: center;
+}
+
+#users-recipes {
+  padding-top: 20px;
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  width: 300px;
+}

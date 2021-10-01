@@ -8,6 +8,7 @@ import Home from './components/pages/home';
 import Sidemenu from './components/ui/sidemenu';
 import UserShowContainer from './components/user/show/user_show_container';
 import UserFavoritesContainer from './components/user/favorites/user_favorites_container';
+import RecipesShowContainer from './components/recipes/recipes_show_container';
 
 
 const App = () => (
@@ -18,6 +19,7 @@ const App = () => (
 
     <Switch>
       <ProtectedRoute path="/favorites" component={UserFavoritesContainer} />
+      <Route exact path="/recipes/:id" component={RecipesShowContainer} />
       <Route exact path="/users/:id" component={UserShowContainer} />
       <Route exact path='/' component={Home} />
       <Route component={RoutingError} />

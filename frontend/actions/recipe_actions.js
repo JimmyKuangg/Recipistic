@@ -1,10 +1,10 @@
-export const FETCH_RECIPES = 'FETCH_RECIPES';
+export const FETCH_RECIPE = 'FETCH_RECIPE';
 export const FETCH_ALL_RECIPES = 'FETCH_ALL_RECIPES';
 import * as RecipesApiUtil from '../util/recipe_api_util'
 
-const fetchRecipes = recipes => ({
-  type: FETCH_RECIPES,
-  recipes
+const fetchRecipe = recipe => ({
+  type: FETCH_RECIPE,
+  recipe
 })
 
 const fetchAllRecipes = recipes => ({
@@ -12,9 +12,9 @@ const fetchAllRecipes = recipes => ({
   recipes
 })
 
-export const receiveRecipes = userId => dispatch => (
-  RecipesApiUtil.getRecipes(userId)
-  .then(recipes => dispatch(fetchRecipes(recipes)))
+export const receiveRecipe = recipeId => dispatch => (
+  RecipesApiUtil.getRecipe(recipeId)
+  .then(recipes => dispatch(fetchRecipe(recipes)))
 )
 
 export const receiveAllRecipes = () => dispatch => (

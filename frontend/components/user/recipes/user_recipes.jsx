@@ -1,14 +1,10 @@
 import React from 'react'
-import UserRecipesItem from './user_recipes_item';
+import RecipesItem from '../../recipes/recipes_item';
 
 export default class UserRecipes extends React.Component {
 
   constructor(props) {
     super(props);
-  }
-
-  componentDidMount() {
-    this.props.receiveRecipes(this.props.userId);
   }
 
   render() {
@@ -19,12 +15,13 @@ export default class UserRecipes extends React.Component {
         </div>
       )
     }
-    
+
     return (
-      <div id="users-recipes">
-        <ul>
+      <div id="user-recipe-container">
+      <h1>{this.props.username}'s recipes</h1>
+        <ul id="users-recipes">
           {this.props.recipes.map((recipe, i) => (
-            <UserRecipesItem recipe={recipe} key={i} />
+            <RecipesItem recipe={recipe} key={i} />
           ))}
         </ul>
       </div>
