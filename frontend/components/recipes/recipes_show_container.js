@@ -4,7 +4,8 @@ import RecipesShow from "./recipes_show";
 
 const mapStateToprops = state => ({
   recipe: state.entities.recipes,
-  ingredients: Object.values(state.entities.ingredients)
+  ingredients: Object.values(state.entities.ingredients),
+  photoUrl: state.entities.recipes.photoUrl, 
 })
 
 const mapDispatchToProps = dispatch => ({

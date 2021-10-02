@@ -21,7 +21,7 @@ const App = () => (
       <ProtectedRoute path="/favorites" component={UserFavoritesContainer} />
       <Route exact path="/recipes/:id" component={RecipesShowContainer} />
       <Route exact path="/users/:id" component={UserShowContainer} />
-      <Route exact path='/' component={Home} />
+      <Route path='/' component={Home} />
       <Route component={RoutingError} />
     </Switch>
 

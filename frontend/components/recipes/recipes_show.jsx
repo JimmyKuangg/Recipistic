@@ -36,6 +36,7 @@ export default class RecipesShow extends React.Component {
              <RecipeIngredientItem ingredient={ingredient} key={i} />
             ))}
           </ul>
+          <img src={this.props.photoUrl} />
         </div>
       </div>
     )

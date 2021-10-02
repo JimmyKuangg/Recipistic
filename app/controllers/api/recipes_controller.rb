@@ -15,8 +15,8 @@ class Api::RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find_by(id: params[:id])
-    @ingredients = @recipe.ingredients
+    @recipe = Recipe.includes(:ingredients).find_by(id: params[:id])
+    # @ingredients = @recipe.ingredients
 
     if @recipe
       render :show
