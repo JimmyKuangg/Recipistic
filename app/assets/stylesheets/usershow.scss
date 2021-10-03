@@ -14,16 +14,25 @@
   flex-direction: column;
   align-items: center;
   font-size: 35px;
-  padding-top: 100px;
-  min-width: 800px;
+  padding-top: 80px;
+  width: 100vw;
 } 
+
+#header-image {
+  background-image: image-url('possiblebackground2.jpg');
+  position: absolute;
+  z-index: -1;
+  top: 80px;
+  width: 100vw;
+  height: 200px;
+}
 
 i {
   font-size: 250px;
 }
 
-p {
-  padding-top: 10px;
+#user-bio {
+  padding-top: 40px;
   font-size: 22px;
 }
 

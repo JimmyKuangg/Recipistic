@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //Testing
   window.getState = store.getState;
-  
+    
   ReactDOM.render( 
       <Root store={store}/>
   , root)

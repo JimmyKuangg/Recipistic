@@ -37,10 +37,10 @@ export default class Navbar extends React.Component {
   fetchHyperlinks(){
     return(
     <div id="my-info">
-      <a href="https://github.com/JimmyKuangg/Recipistic">
+      <a className="info-link" href="https://github.com/JimmyKuangg/Recipistic">
         <i className="fab fa-github" />
       </a>
-      <a href="https://www.linkedin.com/in/jimmy-kuang-789967183/">
+      <a className="info-link" href="https://www.linkedin.com/in/jimmy-kuang-789967183/">
         <i className="fab fa-linkedin"/>
       </a>
     </div>
