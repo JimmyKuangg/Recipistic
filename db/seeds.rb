@@ -144,557 +144,476 @@ recipe_10 = Recipe.create!({
 # Ingredients ###################################
 # Recipe 1 ingredients 
 Ingredient.create!({
-  item: 'Beef Knuckle Bone',
   description: '6 large beef knuckle bones',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Ginger',
   description: '2 large knobs of ginger, halved length-wise',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Garlic',
   description: '1 large head of garlic, halved horizontally',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Onion',
   description: '5 yellow onions, 4 halved horizontally, 1 julienned',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Cinnamon',
   description: '4 sticks of cinnamon',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Pepper',
   description: '1/4 cup of whole black peppercorns',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Star anise',
   description: '4 stars of star anise',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Beef Brisket',
   description: '1 lb of beef brisket',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Salt',
   description: 'Salt to taste',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Fish sauce',
   description: '1/4 cup of fish sauce, more to taste',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Beef Eye Round',
   description: '1 lb of raw beef eye round, cut into thin slices',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Flat rice noodles',
   description: '1 lb of flat rice noodles, fresh or dried',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Bean sprouts',
   description: '1 bag of bean sprouts',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Green onions',
   description: '3 stalks of green onion, finely chopped, more to taste',
   recipe_id: 1
 })
 
 Ingredient.create!({
-  item: 'Cilantro',
   description: '1 cup of chopped cilantro',
   recipe_id: 1
 })
 
 # Recipe 2 Ingredients 
 Ingredient.create!({
-  item: 'Spaghetti',
   description: '1 lb uncooked spaghetti',
   recipe_id: 2
 })
 
 Ingredient.create!({
-  item: 'Garlic',
   description: '6 cloves of garlic, peeled and minced',
   recipe_id: 2
 })
 
 Ingredient.create!({
-  item: 'Olive oil',
   description: '1/2 cup of olive oil',
   recipe_id: 2
 })
 
 Ingredient.create!({
-  item: 'Red pepper flakes',
   description: '1/2 tbsp of red pepper flakes, more to taste',
   recipe_id: 2
 })
 
 Ingredient.create!({
-  item: 'Salt',
   description: '1/2 tsp of salt. more to taste',
   recipe_id: 2
 })
 
 Ingredient.create!({
-  item: 'Black pepper',
   description: '1/2 tsp of ground black pepper. more to taste',
   recipe_id: 2
 })
 
 Ingredient.create!({
-  item: 'Parsley',
   description: '1/2 cup of finely chopped italian parsley',
   recipe_id: 2
 })
 
 Ingredient.create!({
-  item: 'Parmigiano-Reggiano',
   description: '1 cup of grated Parmigiano-Regianno cheese',
   recipe_id: 2
 })
 
 # Recipe 3 ingredients 
 Ingredient.create!({
-  item: 'Active dry yeast',
   description: '1 pack of active dry yeast',
   recipe_id: 3
 })
 
 Ingredient.create!({
-  item: 'Vanilla extract',
   description: '1 tbsp of vanilla extract',
   recipe_id: 3
 })
 
 Ingredient.create!({
-  item: 'Water',
   description: '1/3 cup of water',
   recipe_id: 3
 })
 
 Ingredient.create!({
-  item: 'All-purpose flour',
   description: '8 cups of all-purpose flour',
   recipe_id: 3
 })
 
 Ingredient.create!({
-  item: 'Eggs',
   description: '6 large eggs, beaten',
   recipe_id: 3
 })
 
 Ingredient.create!({
-  item: 'Butter',
   description: '1/2 cup of butter, melted',
   recipe_id: 3
 })
 
 Ingredient.create!({
-  item: 'Milk',
   description: '3 cups of milk',
   recipe_id: 3
 })
 
 Ingredient.create!({
-  item: 'Sugar',
   description: '1/2 cup for dough, more for coating',
   recipe_id: 3
 })
 
 Ingredient.create!({
-  item: 'Oil',
   description: 'Enough to deep fry',
   recipe_id: 3
 })
 
 Ingredient.create!({
-  item: 'Salt',
   description: 'Pinch of salt',
   recipe_id: 3
 })
 
 # Recipe 4 Ingredient
 Ingredient.create!({
-  item: 'Grape leaves',
-  description: '30 grape leaves',
+  description: '1 can of grape leaves',
   recipe_id: 4
 })
 
 Ingredient.create!({
-  item: 'Onion',
   description: '2 large onions, minced',
   recipe_id: 4
 })
 
 Ingredient.create!({
-  item: 'Rice',
   description: '3 cups of uncooked rice',
   recipe_id: 4
 })
 
 Ingredient.create!({
-  item: 'Garlic',
   description: '2 cloves of garlic, minced',
   recipe_id: 4
 })
 
 Ingredient.create!({
-  item: 'Lemons',
   description: '2 whole lemons, juiced',
   recipe_id: 4
 })
 
 Ingredient.create!({
-  item: 'Olive oil',
   description: '1 cup of olive oil',
   recipe_id: 4
 })
 
 Ingredient.create!({
-  item: 'Cilantro',
   description: '1 1/2 tbsp of cilantro, minced',
   recipe_id: 4
 })
 
 Ingredient.create!({
-  item: 'mint',
   description: '1 1/2 tbsp of mint, minced',
   recipe_id: 4
 })
 
 Ingredient.create!({
-  item: 'Green onion',
   description: '5 stalks of green onion. chopped fine',
   recipe_id: 4
 })
 
 Ingredient.create!({
-  item: 'Black pepper',
-  description: '1 tsp of ground black pepper',
+  description: '1 tbsp of ground black pepper',
   recipe_id: 4
 })
 
 Ingredient.create!({
-  item: 'Salt',
-  description: 'Salt to taste',
+  description: '1 tbsp of salt. more to taste',
   recipe_id: 4
 })
 
 # Recipe 5 ingredients
 Ingredient.create!({
-  item: 'Beet',
   description: '6 small beets, peeled and grated',
   recipe_id: 5
 })
 
 Ingredient.create!({
-  item: 'Olive oil',
   description: '4 tbsp of olive oil',
   recipe_id: 5
 })
 
 Ingredient.create!({
-  item: 'Chicken broth',
   description: '6 cups of chicken broth',
   recipe_id: 5
 })
 
 Ingredient.create!({
-  item: 'Water',
   description: '1 cup of water',
   recipe_id: 5
 })
 
 Ingredient.create!({
-  item: 'Potato',
   description: '2 medium potatoes, peeled and diced',
   recipe_id: 5
 })
 
 Ingredient.create!({
-  item: 'Carrot',
   description: '2 small carrots, peeled and diced',
   recipe_id: 5
 })
 
 Ingredient.create!({
-  item: 'Leek',
   description: '1 medium leek, chopped fine',
   recipe_id: 5
 })
 
 Ingredient.create!({
-  item: 'Celery',
   description: '1 rib of celery, diced',
   recipe_id: 5
 })
 
 Ingredient.create!({
-  item: 'Onion',
   description: '1 medium onion, diced',
   recipe_id: 5
 })
 
 Ingredient.create!({
-  item: 'Tomato',
   description: 'One can of stewed tomatoes',
   recipe_id: 5
 })
 
 Ingredient.create!({
-  item: 'Dill',
   description: '3 tbsp of chopped dill',
   recipe_id: 5
 })
 
 # Recipe 6 ingredients
 Ingredient.create!({
-  item: 'Tomato',
   description: '3 large tomatoes, sliced thickly',
   recipe_id: 6
 })
 
 Ingredient.create!({
-  item: 'Mozzarella',
   description: '1 lb of mozzarella, sliced thickly',
   recipe_id: 6
 })
 
 Ingredient.create!({
-  item: 'Basil',
   description: '1 bunch of basil',
   recipe_id: 6
 })
 
 Ingredient.create!({
-  item: 'Olive oil',
   description: '1/2 cup for drizzling',
   recipe_id: 6
 })
 
 Ingredient.create!({
-  item: 'Salt',
   description: 'Coarse salt, add to taste',
   recipe_id: 6
 })
 
 Ingredient.create!({
-  item: 'Black pepper',
   description: 'Coarsely ground black pepper, add to taste',
   recipe_id: 6
 })
 
 # Recipe 7 ingredients
 Ingredient.create!({
-  item: 'Eggplant',
   description: '2 large eggplants, sliced into thin rounds',
   recipe_id: 7
 })
 
 Ingredient.create!({
-  item: 'Tomato',
   description: '5 large tomatoes. sliced into thin rounds, 2 small tomatoes kept whole',
   recipe_id: 7
 })
 
 Ingredient.create!({
-  item: 'Squash',
   description: '2 yellow squashes, sliced into thin rounds',
   recipe_id: 7
 })
 
 Ingredient.create!({
-  item: 'Zucchini',
   description: '2 large zucchinis, sliced into thin rounds',
   recipe_id: 7
 })
 
 Ingredient.create!({
-  item: 'Bell Pepper',
-  description: '3 red bell peppers' ,
+  description: '3 red bell peppers, diced' ,
   recipe_id: 7
 })
 
 Ingredient.create!({
-  item: 'Parsley',
   description: '1/2 tsp of dried parsley',
   recipe_id: 7
 })
 
 Ingredient.create!({
-  item: 'Thyme',
   description: '1/2 tsp of dried thyme',
   recipe_id: 7
 })
 
 Ingredient.create!({
-  item: 'Onion',
   description: '1 small onion, diced',
   recipe_id: 7
 })
 
 Ingredient.create!({
-  item: 'Vegetable stock',
   description: '1 cup of veggie stock',
   recipe_id: 7
 })
 
 Ingredient.create!({
-  item: 'Olive oil',
   description: '1/2 cup of olive oil, more for drizzling',
   recipe_id: 7
 })
 
 # Recipe 8 ingredients 
 Ingredient.create!({
-  item: 'Potato',
   description: '4 large potatoes, peeled and diced into large chunks',
   recipe_id: 8
 })
 
 Ingredient.create!({
-  item: 'Bacon',
   description: '8 strips of bacon',
   recipe_id: 8
 })
 
 Ingredient.create!({
-  item: 'Onion',
   description: '1 large white onion, diced',
   recipe_id: 8
 })
 
 Ingredient.create!({
-  item: 'Egg',
   description: '4 large eggs',
+  recipe_id: 8
+})
+
+Ingredient.create!({
+  description: '2 stalks of green onion. chopped finely',
   recipe_id: 8
 })
 
 # Recipe 9 ingredients
 Ingredient.create!({
-  item: 'Rice noodle',
   description: '1 lb of fresh flat rice noodles',
   recipe_id: 9
 })
 
 Ingredient.create!({
-  item: 'Garlic',
   description: '2 cloves of garlic, finely diced',
   recipe_id: 9
 })
 
 Ingredient.create!({
-  item: 'Egg',
   description: '2 eggs, scrambled',
   recipe_id: 9
 })
 
 Ingredient.create!({
-  item: 'Soy sauce',
   description: '1/3 cup of dark soy sauce',
   recipe_id: 9
 })
 
 Ingredient.create!({
-  item: 'Oyster sauce',
   description: '1/4 cup of oyster sauce',
   recipe_id: 9
 })
 
 Ingredient.create!({
-  item: 'Sugar',
   description: 'A pinch of sugar',
   recipe_id: 9
 })
 
 Ingredient.create!({
-  item: 'Black pepper',
   description: 'Pinch of black pepper',
   recipe_id: 9
 })
 
 # Recipe 10 ingredients
 Ingredient.create!({
-  item: 'All-purpose flour',
   description: '12 oz of all-purpose flour',
   recipe_id: 10
 })
 
 Ingredient.create!({
-  item: 'Butter',
   description: '2 sticks of cold butter, cubed',
   recipe_id: 10
 })
 
 Ingredient.create!({
-  item: 'Sugar',
   description: '2 tbsp of sugar for the dough, 3/4 cup for the filling',
   recipe_id: 10
 })
 
 Ingredient.create!({
-  item: 'Salt',
   description: '1 tbsp of salt',
   recipe_id: 10
 })
 
 Ingredient.create!({
-  item: 'Water',
   description: '6 oz of ice cold water',
   recipe_id: 10
 })
 
 Ingredient.create!({
-  item: 'Apple',
-  description: '2 lb of baking apples',
+  description: '2 lb of baking apples, chopped into small chunks',
   recipe_id: 10
 })
 
 Ingredient.create!({
-  item: 'Cinnamon',
   description: '1/4 tsp of ground cinnamon',
   recipe_id: 10
 })
 
 Ingredient.create!({
-  item: 'Allspice',
   description: '1/4 tsp of allspice',
   recipe_id: 10
 })
 
 Ingredient.create!({
-  item: 'Nutmeg',
   description: '1/4 tsp of nutmeg',
+  recipe_id: 10
+})
+
+Ingredient.create!({
+  description: '1 egg, beaten',
   recipe_id: 10
 })
 
@@ -743,8 +662,14 @@ Step.create!({
 })
 
 Step.create!({
-  description: 'Pour the boiling hot broth on top and watch the raw beef get cooked as the water hits it. Enjoy!',
+  description: 'Take your chilled brisket and slice it into 1/2 inch slices. Add them to your bowl.',
   recipe_order: 8,
+  recipe_id: 1
+})
+
+Step.create!({
+  description: 'Pour the boiling hot broth on top and watch the raw beef get cooked as the broth hits it. Enjoy!',
+  recipe_order: 9,
   recipe_id: 1
 })
 
@@ -817,14 +742,285 @@ Step.create!({
 })
 
 Step.create!({
-  description: 'Once your oil is up to temp, carefully add your dough discs in and fry until brown.'
+  description: 'Once your oil is up to temp, carefully add your dough discs in and fry until brown.',
   recipe_order: 6,
   recipe_id: 3
 })
 
 Step.create!({
-  description: 'When the desired color is reached, remove the malasadas from the oil and drain on paper towel. Sprinkle with sugar while they are hot. Let cool and enjoy.'
+  description: 'When the desired color is reached, remove the malasadas from the oil and drain on paper towel. Sprinkle with sugar while they are hot. Let cool and enjoy.',
   recipe_order: 7,
   recipe_id: 3
+})
+
+# Recipe 4 steps
+Step.create!({
+  description: 'Prepare the leaves by draining the liquid from the can and removing the stems.',
+  recipe_order: 1,
+  recipe_id: 4
+})
+
+Step.create!({
+  description: 'Take your rice and wash it thoroughly. In a skillet, add some olive oil and your chopped onions. Cook the onions until they become slightly translucent.',
+  recipe_order: 2,
+  recipe_id: 4
+})
+
+Step.create!({
+  description: 'Add your rice to the skillet and cook the rice slightly for about a minute. Once done, remove all of the contents and transfer to a bowl',
+  recipe_order: 3,
+  recipe_id: 4
+})
+
+Step.create!({
+  description: 'To the bowl of rice and onions, add your mint, cilantro, and green onions. Mix this well and prepare to use this to stuff your grape leaves.',
+  recipe_order: 4,
+  recipe_id: 4
+})
+
+Step.create!({
+  description: 'With your filling ready, take a grape leaf and place it on a flat surface. Add about a tbsp of your filling to the stem part of the leaf. Roll the leaf and filling, tuck in the sides, and roll it all the way.',
+  recipe_order: 5,
+  recipe_id: 4
+})
+
+Step.create!({
+  description: 'Take your stuffed grape leaves and begin to layer them in a pot. Put the dolmades fold side down to prevent them from unfolding while cooking. Make sure they are packed tight next to one another, and layered on top of one another.',
+  recipe_order: 6,
+  recipe_id: 4
+})
+
+Step.create!({
+  description: 'Add the lemon juice, salt, pepper, and the rest of your olive oil to the pot. Add enough water to barely cover the dolmades and bring the pot to a boil. Once boiling, simmer for 30 minutes.',
+  recipe_order: 7,
+  recipe_id: 4
+})
+
+Step.create!({
+  description: 'After 30 minutes, turn the heat off and let cool slightly. Once cooled, remove from the pot and serve cold or hot.',
+  recipe_order: 8,
+  recipe_id: 4
+})
+
+# Recipe 5 steps
+Step.create!({
+  description: 'In a pan, heat your olive oil over medium heat. Add your leeks, celery, and onion. Add some salt and slowly cook these vegetables down for 6 minutes.',
+  recipe_order: 1,
+  recipe_id: 5
+})
+
+Step.create!({
+  description: 'Add your water, chicken broth, and beets after the vegetables have cooked. Bring to a boil and let simmer for 30 minutes, or until the beets are fork tender.',
+  recipe_order: 2,
+  recipe_id: 5
+})
+
+Step.create!({
+  description: 'Once the beets are tender, add your potatoes and carrots. Cook until both are tender as well.',
+  recipe_order: 3,
+  recipe_id: 5
+})
+
+Step.create!({
+  description: 'Add your tomatoes and cook for another 10 minutes. Once 10 minutes have passed, turn the heat off, add some of your dill and mix it in well. When serving, add more dill on top.',
+  recipe_order: 4,
+  recipe_id: 5
+})
+
+# Recipe 6 steps
+Step.create!({
+  description: 'Make sure all your ingredients are prepared and sliced',
+  recipe_order: 1,
+  recipe_id: 6
+})
+
+Step.create!({
+  description: 'Layer your tomatoes, mozzarella, and basil on top of one another in that order. Layer them in a way where you can begin a new layer on top of the last.',
+  recipe_order: 2,
+  recipe_id: 6
+})
+
+Step.create!({
+  description: 'Drizzle the olive oil over top. Add the salt and pepper and enjoy.',
+  recipe_order: 3,
+  recipe_id: 6
+})
+
+# Recipe 7 steps 
+Step.create!({
+  description: 'Turn on your oven to preheat it to 375°F.',
+  recipe_order: 1,
+  recipe_id: 7
+})
+
+Step.create!({
+  description: 'In a blender, add your whole tomatoes and diced bell peppers. Also add your parsley, thyme, onion, garlic, olive oil, and vegetable stock. Blend on high power until smooth.',
+  recipe_order: 2,
+  recipe_id: 7
+})
+
+Step.create!({
+  description: 'In a large baking dish, add the sauce you just made as a thin layer on the bottom. In an alternating pattern, layer your vegetables closely, one on top of the other and across the entire baking dish',
+  recipe_order: 3,
+  recipe_id: 7
+})
+
+Step.create!({
+  description: 'Drizzle some olive oil over the arranged vegetables. Cut a piece of parchment paper to cover the vegetables and place it into the preheated oven for 1 hour.',
+  recipe_order: 4,
+  recipe_id: 7
+})
+
+Step.create!({
+  description: 'Remove from the oven and serve hot.',
+  recipe_order: 5,
+  recipe_id: 7
+})
+
+# Recipe 8 steps
+Step.create!({
+  description: 'In a deep pan skillet, heat some oil over low heat and put your potatoes in. Slowly cook them until fork tender',
+  recipe_order: 1,
+  recipe_id: 8
+})
+
+Step.create!({
+  description: 'After the potatoes are tender and golden brown, remove them from the skillet. Clean the skillet and put it back on the stove on medium high heat. Add your bacon to the skillet and cook it until it becomes crispy.',
+  recipe_order: 2,
+  recipe_id: 8
+})
+
+Step.create!({
+  description: 'When crispy, remove the bacon and keep the bacon fat. Set the bacon aside on a paper towel. When cooled, chop the bacon into tiny pieces.',
+  recipe_order: 3,
+  recipe_id: 8
+})
+
+Step.create!({
+  description: 'With the bacon removed, add your cooked potatoes back into the same skillet and set the heat to low. Add your bacon bits and mix well.',
+  recipe_order: 4,
+  recipe_id: 8
+})
+
+Step.create!({
+  description: 'Create 4 small pockets in your potato bacon mixture. In those pockets, crack your eggs into those pockets and cover with a lid for about 5 minutes.',
+  recipe_order: 5,
+  recipe_id: 8
+})
+
+Step.create!({
+  description: 'Add your green onions and serve the dish in the skillet itself.',
+  recipe_order: 6,
+  recipe_id: 8
+})
+
+# Recipe 9 steps
+Step.create!({
+  description: 'In a bowl, mix the oyster sauce, soy sauce, sugar, and black pepper. Set aside for later',
+  recipe_order: 1,
+  recipe_id: 9
+})
+
+Step.create!({
+  description: 'In a pan or wok, heat up some oil, but don"t allow it to begin smoking. If it does, take the pan off the heat and start over. Add your garlic and cook them slightly.',
+  recipe_order: 2,
+  recipe_id: 9
+})
+
+Step.create!({
+  description: 'Add your eggs and allow it to cook. Do not mix it too much. Once the edge of eggs have set and the middle is still runny, add your rice noodles.',
+  recipe_order: 3,
+  recipe_id: 9
+})
+
+Step.create!({
+  description: 'Toss everything together, making sure that everything is evenly spread out. Once ready, add your sauce and mix well.',
+  recipe_order: 4,
+  recipe_id: 9
+})
+
+Step.create!({
+  description: 'Plate the noodles on a dish and serve.',
+  recipe_order: 5,
+  recipe_id: 9
+})
+
+# Recipe 10 steps
+Step.create!({
+  description: 'Add your flour. salt, and 2 tbsps of sugar to a food processor. Mix and combine well.',
+  recipe_order: 1,
+  recipe_id: 10
+})
+
+Step.create!({
+  description: 'Add all of your cold butter and mix slowly until the mixture begins to looks crumbly, yet sticks together when pressed firmly.',
+  recipe_order: 2,
+  recipe_id: 10
+})
+
+Step.create!({
+  description: 'Add your ice water and mix well, until a dough forms.',
+  recipe_order: 3,
+  recipe_id: 10
+})
+
+Step.create!({
+  description: 'Take your dough out of the food processor and shape it into a flat disc. Wrap the dough in plastic wrap and put it in a fridge to cool for 2 hours.',
+  recipe_order: 4,
+  recipe_id: 10
+})
+
+Step.create!({
+  description: 'While the dough is chilling, prepare the filling by mixing your chopped apples, nutmeg, allspice, and cinnamon.',
+  recipe_order: 5,
+  recipe_id: 10
+})
+
+Step.create!({
+  description: 'After 2 hours, preheat your oven to 475°F',
+  recipe_order: 6,
+  recipe_id: 10
+})
+
+Step.create!({
+  description: 'Take your dough and dust it with flour. Seperate the dough into two equal pieces.',
+  recipe_order: 7,
+  recipe_id: 10
+})
+
+Step.create!({
+  description: 'Take one piece of dough and roll it out flat and wider than your pie tin. When ready, carefully place your flattened dough into  your pie tin, pressing the dough into the pie tins ridges and cutting off the excess.',
+  recipe_order: 8,
+  recipe_id: 10
+})
+
+Step.create!({
+  description: 'Prepare the top of the pie by flattening the other piece of dough into a rectangular shape. Cut this plane of dough into one inch strips and set aside.',
+  recipe_order: 9,
+  recipe_id: 10
+})
+
+Step.create!({
+  description: 'Add your apple filling to your pie tin dough and take your dough strips and place them on top of the apples in an interlaced pattern.',
+  recipe_order: 10,
+  recipe_id: 10
+})
+
+Step.create!({
+  description: 'Brush the top of your pie with the egg and carefully place it into the oven.',
+  recipe_order: 11,
+  recipe_id: 10
+})
+
+Step.create!({
+  description: 'After 10 minutes, lower the heat to 400°F and bake for another 30 minutes.',
+  recipe_order: 12,
+  recipe_id: 10
+})
+
+Step.create!({
+  description: 'Let cool for at least 2 hours. When cool, cut and serve.',
+  recipe_order: 13,
+  recipe_id: 10
 })
 
