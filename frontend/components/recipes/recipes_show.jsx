@@ -1,5 +1,6 @@
 import React from 'react'
-import RecipeIngredientItem from './recipe_ingredient_item';
+import RecipeIngredients from './recipe_ingredients';
+import RecipeSteps from './recipe_steps';
 
 export default class RecipesShow extends React.Component {
 
@@ -17,26 +18,32 @@ export default class RecipesShow extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    this.props.clearRecipe();
+  }
+
   render() {
     if (!this.props.recipe) {
       return 'no recipe found';
     } 
-    
-    console.log(this.props.ingredients);
 
     return (
       <div id="recipe-show">
-        <h1>{this.props.recipe.title}</h1>
-        <h2>{this.props.recipe.body}</h2>
+        <div id="recipe-header">
+          <p>{this.props.recipe.title}</p>
+          <div id="recipe-header-author">
+          </div>
+          <h2><i className="fas fa-hamburger"></i></h2> 
+        </div>
         <div id="recipe-container">
-          <h2>Ingredients</h2>
-          <h2>Serves: {this.props.recipe.servings}</h2>
-          <ul id="recipe-ingredients">
-            {this.props.ingredients.map((ingredient, i) => (
-             <RecipeIngredientItem ingredient={ingredient} key={i} />
-            ))}
-          </ul>
-          <img src={this.props.photoUrl} />
+          <div id="recipe-body">
+            <h2>{this.props.recipe.body}</h2>
+            <h2>Serves: {this.props.recipe.servings}</h2>
+          </div>
+          <div id="ingredients-steps">
+            <RecipeIngredients ingredients={this.props.ingredients} />
+            <RecipeSteps steps={this.props.steps} />
+          </div>
         </div>
       </div>
     )

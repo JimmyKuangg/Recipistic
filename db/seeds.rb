@@ -18,7 +18,7 @@ user_2 = User.create!({
   username: 'BoneAppleTeeth',
   email: 'homecook@io.com',
   password: 'proshef123',
-  bio: "My food will always make you say bone app the teeth."
+  bio: "Bone smack the teeth."
 })
 
 user_3 = User.create!({
@@ -29,10 +29,10 @@ user_3 = User.create!({
 })
 
 user_4 = User.create!({
-  username: 'NotGusto',
+  username: 'NotGusteau',
   email: 'anyonecancook@gustos.io',
   password: 'linguini',
-  bio: "Anyone can cook"
+  bio: "Anyone can cook."
 })
 
 user_5 = User.create!({
@@ -1024,3 +1024,8 @@ Step.create!({
   recipe_id: 10
 })
 
+# Reviews #######################################
+
+Review.create!({
+  
+})

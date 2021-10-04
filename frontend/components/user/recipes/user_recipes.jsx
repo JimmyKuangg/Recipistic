@@ -1,5 +1,5 @@
 import React from 'react'
-import RecipesItem from '../../recipes/recipes_item';
+import RecipesIndexItem from '../../recipes/recipes_index_item';
 
 export default class UserRecipes extends React.Component {
 
@@ -21,7 +21,7 @@ export default class UserRecipes extends React.Component {
       <h1>{this.props.username}'s recipes</h1>
         <ul id="users-recipes">
           {this.props.recipes.map((recipe, i) => (
-            <RecipesItem recipe={recipe} key={i} />
+            <RecipesIndexItem recipe={recipe} key={i} />
           ))}
         </ul>
       </div>

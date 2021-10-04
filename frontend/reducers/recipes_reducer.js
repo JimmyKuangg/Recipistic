@@ -1,5 +1,5 @@
 import { FETCH_USER } from "../actions/user_actions";
-import { FETCH_RECIPE } from "../actions/recipe_actions";
+import { CLEAR_RECIPE, FETCH_RECIPE } from "../actions/recipe_actions";
 
 const RecipesReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
@@ -12,7 +12,14 @@ const RecipesReducer = (oldState = {}, action) => {
         return {};
       }
     case FETCH_RECIPE:
-      return action.recipe;
+      return {
+        id: action.recipe.id, 
+        title: action.recipe.title, 
+        body: action.recipe.body,
+        servings: action.recipe.servings
+      };
+    case CLEAR_RECIPE:
+      return {};
     default:
       return oldState;
   }

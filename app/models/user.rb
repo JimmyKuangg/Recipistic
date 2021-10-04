@@ -37,4 +37,8 @@ class User < ApplicationRecord
   has_many :recipes,
     foreign_key: :user_id,
     class_name: :Recipe
+
+  has_many :reviews,
+    foreign_key: :user_id,
+    class_name: :review
 end

@@ -16,3 +16,14 @@ json.steps do
   end
 end
 
+json.ratings do 
+  @recipe.reviews.each.with_index do |review, idx|
+    json.set! idx+1 do
+      json.extract! review, :id, :user_id, :body, :rating
+    end
+  end
+end
+
+json.author do 
+  json.extract! @recipe.user, :id, :username
+end

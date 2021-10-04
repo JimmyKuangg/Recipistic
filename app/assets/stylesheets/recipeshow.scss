@@ -2,5 +2,46 @@
 
 #recipe-show {
   font-family: 'Merriweather', serif;
-  font-size: 50px;
+  font-size: 20px;
+}
+
+#recipe-header {
+  height: 87vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 40px;
+}
+
+#recipe-container {
+  max-width: 70%;
+  margin-left: 15%;
+  margin-right: 5%;
+}
+
+#recipe-body {
+  text-align: center;
+}
+
+#ingredient-steps {
+  display: flex;
+}
+
+.instruction-header {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.instruction-item {
+  margin: 10px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+#step-item p {
+  font-weight: bold;
+  margin: 10px;
 }

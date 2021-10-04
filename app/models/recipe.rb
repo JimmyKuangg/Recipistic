@@ -17,4 +17,9 @@ class Recipe < ApplicationRecord
     foreign_key: :recipe_id,
     class_name: :Step,
     dependent: :destroy
+  
+  has_many :reviews,
+    foreign_key: :recipe_id,
+    class_name: :Review,
+    dependent: :destroy
 end

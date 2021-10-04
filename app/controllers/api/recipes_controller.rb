@@ -15,7 +15,7 @@ class Api::RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.includes(:ingredients, :steps).find_by(id: params[:id])
+    @recipe = Recipe.includes(:user, :ingredients, :steps, :reviews).find_by(id: params[:id])
     # @ingredients = @recipe.ingredients
 
     if @recipe
@@ -24,5 +24,19 @@ class Api::RecipesController < ApplicationController
       render json: ["No recipe found with that id"]
     end
   end
-  
+
+  def create
+    @recipe = Recipe.new(recipe_params)
+
+    if @recipe.save!
+      render :show
+    else
+      render json: @recipe.errors.full_messages
+    end
+  end
+
+  private
+  def recipe_params
+    params.require(:recipe).permit(:title, :body, :servings, :user_id, :public)
+  end
 end

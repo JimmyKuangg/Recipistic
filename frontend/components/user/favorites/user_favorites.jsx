@@ -9,7 +9,10 @@ export default class UserFavorites extends React.Component {
 
   componentDidMount() {
     this.props.receiveFavorites(this.props.currentUserId);
-    console.log(this.props);
+  }
+
+  componentWillUnmount() {
+    this.props.clearFavorites();
   }
 
   render() {
