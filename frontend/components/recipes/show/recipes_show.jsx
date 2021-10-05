@@ -1,6 +1,7 @@
 import React from 'react'
-import RecipeIngredients from './recipe_ingredients';
-import RecipeSteps from './recipe_steps';
+import RecipeIngredients from '../recipe_ingredients';
+import RecipeSteps from '../recipe_steps';
+import RecipeReviews from '../reviews/show/recipe_reviews';
 
 export default class RecipesShow extends React.Component {
 
@@ -32,6 +33,7 @@ export default class RecipesShow extends React.Component {
         <div id="recipe-header">
           <p>{this.props.recipe.title}</p>
           <div id="recipe-header-author">
+            <p>{this.props.recipe.avgRating}</p>
           </div>
           <h2><i className="fas fa-hamburger"></i></h2> 
         </div>
@@ -44,6 +46,7 @@ export default class RecipesShow extends React.Component {
             <RecipeIngredients ingredients={this.props.ingredients} />
             <RecipeSteps steps={this.props.steps} />
           </div>
+          <RecipeReviews reviews={this.props.reviews} currentUser={this.props.currentUser}/>
         </div>
       </div>
     )

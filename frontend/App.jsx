@@ -8,7 +8,7 @@ import Home from './components/pages/home';
 import Sidemenu from './components/ui/sidemenu';
 import UserShowContainer from './components/user/show/user_show_container';
 import UserFavoritesContainer from './components/user/favorites/user_favorites_container';
-import RecipesShowContainer from './components/recipes/recipes_show_container';
+import RecipesShowContainer from './components/recipes/show/recipes_show_container';
 
 
 const App = () => (

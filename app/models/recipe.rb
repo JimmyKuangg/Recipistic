@@ -22,4 +22,13 @@ class Recipe < ApplicationRecord
     foreign_key: :recipe_id,
     class_name: :Review,
     dependent: :destroy
+
+  has_many :reviewers,
+    through: :reviews,
+    source: :user
+    
+  has_many :favorites,
+    foreign_key: :recipe_id,
+    class_name: :Favorite,
+    dependent: :destroy
 end

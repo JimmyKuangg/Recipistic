@@ -11,3 +11,11 @@ export const getRecipe = recipeId => (
     url: `/api/recipes/${recipeId}`
   })
 )
+
+export const editReview = review => (
+  $.ajax({
+    method: 'PATCH',
+    url: '/api/review',
+    data: {review}
+  })
+)

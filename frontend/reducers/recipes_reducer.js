@@ -12,12 +12,7 @@ const RecipesReducer = (oldState = {}, action) => {
         return {};
       }
     case FETCH_RECIPE:
-      return {
-        id: action.recipe.id, 
-        title: action.recipe.title, 
-        body: action.recipe.body,
-        servings: action.recipe.servings
-      };
+      return action.recipe;
     case CLEAR_RECIPE:
       return {};
     default:

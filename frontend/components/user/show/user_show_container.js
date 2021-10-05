@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { receiveRecipes } from "../../../actions/recipe_actions";
+import { receiveRecipe } from "../../../actions/recipe_actions";
 import { findUser } from "../../../actions/user_actions";
 import UserShow from "./user_show";
 
@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   findUser: id => dispatch(findUser(id)),
-  receiveRecipes: userId => dispatch(receiveRecipes(userId)),
+  receiveRecipe: userId => dispatch(receiveRecipe(userId)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserShow);

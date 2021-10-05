@@ -1,5 +1,5 @@
 import React from 'react'
-import UserFavoritesItem from './user_favorites_item';
+import RecipesIndexItem from '../../recipes/recipes_index_item';
 
 export default class UserFavorites extends React.Component {
 
@@ -21,7 +21,7 @@ export default class UserFavorites extends React.Component {
         <h1>Your Favorites;</h1>
         <ul>
           {this.props.favorites.map((favorite, i) => (
-            <UserFavoritesItem favorite={favorite} key={i} />
+            <h1>hello!</h1>
           ))}
         </ul>
       </div>

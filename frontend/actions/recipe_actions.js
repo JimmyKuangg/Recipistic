@@ -19,7 +19,7 @@ export const clearRecipe = () => ({
 
 export const receiveRecipe = recipeId => dispatch => (
   RecipesApiUtil.getRecipe(recipeId)
-  .then(recipes => dispatch(fetchRecipe(recipes)))
+  .then(recipe => dispatch(fetchRecipe(recipe)))
 )
 
 export const receiveAllRecipes = () => dispatch => (

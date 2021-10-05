@@ -34,6 +34,10 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Favorite
 
+  has_many :favorite_recipes,
+    through: :favorites,
+    source: :recipe
+
   has_many :recipes,
     foreign_key: :user_id,
     class_name: :Recipe
