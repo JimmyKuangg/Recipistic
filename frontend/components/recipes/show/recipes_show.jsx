@@ -33,7 +33,7 @@ export default class RecipesShow extends React.Component {
         <div id="recipe-header">
           <p>{this.props.recipe.title}</p>
           <div id="recipe-header-author">
-            <p>{this.props.recipe.avgRating}</p>
+            <p>{this.props.recipe.average}</p>
           </div>
           <h2><i className="fas fa-hamburger"></i></h2> 
         </div>

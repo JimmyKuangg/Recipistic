@@ -19,3 +19,11 @@ export const editReview = review => (
     data: {review}
   })
 )
+
+export const createReview = review => (
+  $.ajax({
+    method: 'POST',
+    url: '/api/review',
+    data: { review }
+  })
+)

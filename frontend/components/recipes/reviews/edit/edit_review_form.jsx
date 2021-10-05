@@ -4,7 +4,15 @@ export default class EditReviewForm extends React.Component{
   constructor(props) {
     super(props);
 
-    this.state = this.props.review
+    for(let i = 0; i < this.props.reviews.length; i++){
+      if (this.props.reviews[i].reviewerId === this.props.currentUser) {
+        this.state = this.props.reviews[i];
+      }
+    }
+  }
+
+  componentDidMount() {
+    console.log(this.state);
   }
 
   handleChange(e) {
@@ -15,7 +23,6 @@ export default class EditReviewForm extends React.Component{
     e.preventDefault();
     this.props.updateReview(this.state)
       .then(() => this.props.closeModal());
-    console.log('hello!');
   }
 
   render() {

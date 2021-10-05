@@ -7,7 +7,8 @@ import EditReviewForm from "./edit_review_form";
 const mapStateToprops = state => {
   return ({
     errors: state.errors,
-    review: state.entities.reviews[state.session.id]
+    reviews: Object.values(state.entities.reviews),
+    currentUser: state.session.id
   })
 }
 

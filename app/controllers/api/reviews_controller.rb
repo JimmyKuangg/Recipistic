@@ -10,8 +10,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def update
-    @review = Review.find_by(id: current_user.id)
-
+    @review = Review.find_by(id: params[:review][:id] )
     if @review && @review.update(review_params)
       render :show
     else  
