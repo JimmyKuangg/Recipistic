@@ -18,22 +18,25 @@ export default class RecipesShow extends React.Component {
       this.props.receiveRecipe(this.props.match.params.id);
     }
   }
-
+  
   componentWillUnmount() {
     this.props.clearRecipe();
   }
 
   render() {
-    if (!this.props.recipe) {
+    if (this.props.recipe === {}) {
       return 'no recipe found';
     } 
-
+    
     return (
       <div id="recipe-show">
         <div id="recipe-header">
-          <p>{this.props.recipe.title}</p>
-          <div id="recipe-header-author">
-            <p>{this.props.recipe.average}</p>
+          <div id="recipe-info">
+            <h1>{this.props.recipe.title}</h1>
+            <p>By {this.props.recipe.author}</p>
+            {this.props.recipe.average ? 
+              <h2>{parseFloat(this.props.recipe.average).toFixed(1)}</h2>   
+            : ''}
           </div>
           <h2><i className="fas fa-hamburger"></i></h2> 
         </div>

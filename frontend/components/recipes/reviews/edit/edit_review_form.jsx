@@ -11,10 +11,6 @@ export default class EditReviewForm extends React.Component{
     }
   }
 
-  componentDidMount() {
-    console.log(this.state);
-  }
-
   handleChange(e) {
     this.setState({body: e.target.value})
   }

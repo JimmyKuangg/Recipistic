@@ -27,9 +27,7 @@ json.steps do
   end
 end
 
-json.author do 
-  json.extract! @recipe.user, :id, :username
-end
+json.author @recipe.user.username
 
 json.reviews do
   @recipe.reviews.each do |review|

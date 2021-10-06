@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session/login_container';
 import SignupFormContainer from '../user/signup/signup_container';
 import EditReviewFormContainer from '../recipes/reviews/edit/edit_review_form_container';
+import CreateReviewFormContainer from '../recipes/reviews/create/create_review_form_container';
 
 const mapStateToProps = state => ({
   modal: state.ui.modal
@@ -29,6 +30,9 @@ function Modal({modal, closeModal}) {
       break;
     case 'editReview':
       component = <EditReviewFormContainer />
+      break;
+    case 'createReview':
+      component = <CreateReviewFormContainer />
       break;
     default: 
       return null;

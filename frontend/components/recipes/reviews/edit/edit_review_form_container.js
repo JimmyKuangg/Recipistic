@@ -4,13 +4,11 @@ import { updateReview } from "../../../../actions/review_actions";
 import { clearSessionErrors } from "../../../../actions/session_actions";
 import EditReviewForm from "./edit_review_form";
 
-const mapStateToprops = state => {
-  return ({
-    errors: state.errors,
-    reviews: Object.values(state.entities.reviews),
-    currentUser: state.session.id
-  })
-}
+const mapStateToprops = state => ({
+  errors: state.errors,
+  reviews: Object.values(state.entities.reviews),
+  currentUser: state.session.id
+})
 
 const mapDispatchToProps = dispatch => ({
   clearErrors: () => dispatch(clearSessionErrors()),
