@@ -18,6 +18,15 @@ class Api::ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @review = Review.find_by(id: params[:id])
+    if @review
+      @review.destroy
+    else
+      render json: ["No review found with that id"]
+    end
+  end
+  
   private
   def review_params
     params.require(:review).permit(:body, :rating, :user_id, :recipe_id)

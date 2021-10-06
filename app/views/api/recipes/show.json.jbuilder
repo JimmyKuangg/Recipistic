@@ -32,7 +32,7 @@ json.author @recipe.user.username
 json.reviews do
   @recipe.reviews.each do |review|
     json.set! review.id do
-      json.extract! review, :id, :body
+      json.extract! review, :id, :body, :rating
       json.user review.user.username
       json.reviewer_id review.user.id
     end

@@ -71,7 +71,29 @@
 }
 
 .review-input {
+  font-family: 'Poppins', sans-serif;
   resize: none;
   height: 100px;
-  width: 250px;
+  width: 350px;
+  font-size: 15px;
+}
+
+.rating {
+  padding-top: 20px;
+
+  label {
+    transition: color 0.25s;
+  }
+  
+  label:hover {
+    color: red;
+  }
+
+  input {
+    display: none;
+  }
+
+  i {
+    font-size: 25px;
+  }
 }

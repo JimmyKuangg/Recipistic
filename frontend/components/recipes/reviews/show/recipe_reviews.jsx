@@ -1,6 +1,7 @@
 import React from 'react';
 import { openModal } from '../../../../actions/modal_actions';
 import { connect } from 'react-redux';
+import { deleteReview } from '../../../../actions/review_actions';
 
 const mapStateToProps = state => ({
   reviews: Object.values(state.entities.reviews),
@@ -8,7 +9,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  openModal: modal => dispatch(openModal(modal))
+  openModal: modal => dispatch(openModal(modal)),
+  deleteReview: reviewId => dispatch(deleteReview(reviewId))
 })
 
 function RecipeReviews(props) {
@@ -38,11 +40,15 @@ function RecipeReviews(props) {
           <p>{review.body}</p>
           <p>{review.user}</p>
           {props.currentUser === review.reviewerId ? 
-            <button onClick={() => props.openModal('editReview')}>
-              Edit Review
-            </button> 
+            <div>
+              <button onClick={() => props.openModal('editReview')}>
+                Edit Review
+              </button> 
+              <button onClick={() => props.deleteReview(review.id)}>
+                Delete Review
+              </button>
+            </div>
             : ''}
-            {console.log(reviewPosted)}
         </div>
       ))}
     </div>
