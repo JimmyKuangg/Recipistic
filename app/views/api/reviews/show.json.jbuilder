@@ -9,6 +9,6 @@ if reviews.length != 0
   reviews.each do |review|
     sum += review.rating
   end
-  avg = (sum / reviews.length) * 1.0
+  avg = (sum / (reviews.length * 1.0))
   json.average avg
 end

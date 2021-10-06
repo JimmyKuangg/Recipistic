@@ -7,7 +7,7 @@ if @recipe.reviews.length != 0
   @recipe.reviews.each do |review|
     sum += review.rating
   end
-  avg = (sum / @recipe.reviews.length) * 1.0
+  avg = (sum / (@recipe.reviews.length * 1.0))
   json.average avg
 end
 

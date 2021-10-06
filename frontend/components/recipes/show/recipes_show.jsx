@@ -2,6 +2,7 @@ import React from 'react'
 import RecipeIngredients from '../recipe_ingredients';
 import RecipeSteps from '../recipe_steps';
 import RecipeReviews from '../reviews/show/recipe_reviews';
+import RatingStars from './rating_stars';
 
 export default class RecipesShow extends React.Component {
 
@@ -34,9 +35,12 @@ export default class RecipesShow extends React.Component {
           <div id="recipe-info">
             <h1>{this.props.recipe.title}</h1>
             <p>By {this.props.recipe.author}</p>
-            {this.props.recipe.average ? 
-              <h2>{parseFloat(this.props.recipe.average).toFixed(1)}</h2>   
-            : ''}
+            <div id="rating">
+              {this.props.recipe.average ? 
+                <h2>{parseFloat(this.props.recipe.average).toFixed(1)}</h2>   
+              : ''}
+              <RatingStars average={this.props.recipe.average}/>
+            </div>
           </div>
           <h2><i className="fas fa-hamburger"></i></h2> 
         </div>

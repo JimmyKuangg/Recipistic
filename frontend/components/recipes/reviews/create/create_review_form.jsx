@@ -52,7 +52,7 @@ export default class CreateReviewForm extends React.Component {
             value={this.state.body}
             onChange={this.handleChange('body').bind(this)}
           />
-          <div className="rating">
+          <div className="rating-form">
             <label>{this.state.rating < 1 ? <i className="far fa-star"></i> : <i className="fas fa-star"></i>}
               <input type="radio" value="one-star" onClick={this.handleClick('star1')}/>
             </label>
