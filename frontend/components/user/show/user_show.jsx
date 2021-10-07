@@ -35,11 +35,8 @@ export default class UserShow extends React.Component {
             <ul id="users-recipes">
               {this.props.recipes.map((recipe, i) => (
                 <RecipesIndexItem 
-                  id={recipe.id}
-                  title={recipe.title} 
-                  average={recipe.average}
-                  numReviews={recipe.numReviews}
-                  key={i} 
+                  recipe={recipe}
+                  key={i}
                 />
               ))}
             </ul>

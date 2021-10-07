@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import RecipeIngredients from '../recipe_ingredients';
 import RecipeSteps from '../recipe_steps';
 import RecipeReviews from '../reviews/show/recipe_reviews';
@@ -28,13 +29,13 @@ export default class RecipesShow extends React.Component {
     if (this.props.recipe === {}) {
       return 'no recipe found';
     } 
-    console.log(this.props);
+  
     return (
       <div id="recipe-show">
         <div id="recipe-header">
           <div id="recipe-info">
             <h1>{this.props.recipe.title}</h1>
-            <p>By {this.props.recipe.author}</p>
+            <p>By <Link to={`/users/${this.props.recipe.userId}`}>{this.props.recipe.author}</Link></p>
             <div id="rating">
               {this.props.recipe.average ? 
                 <h2>{parseFloat(this.props.recipe.average).toFixed(1)}</h2>   

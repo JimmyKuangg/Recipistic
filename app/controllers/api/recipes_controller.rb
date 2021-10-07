@@ -8,7 +8,7 @@ class Api::RecipesController < ApplicationController
     end
 
     if @recipes
-      render :show
+      render :index
     else
       render json: ["No recipes found"]
     end

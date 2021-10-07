@@ -15,7 +15,8 @@ const ReviewsReducer = (oldState = {}, action) => {
         id: action.review.id,
         body: action.review.body,
         reviewerId: action.review.reviewerId,
-        rating: action.review.rating
+        rating: action.review.rating,
+        user: action.review.user
       };
       return newState;
     case REMOVE_REVIEW:

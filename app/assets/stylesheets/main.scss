@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Merriweather&family=Roboto+Slab&display=swap');
 
 body {
   background-color: white;
@@ -7,13 +8,17 @@ body {
 }
 
 #navbar {
-  padding: 5px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: rgb(250, 247, 247);
+
+  ul {
+    display: flex;
+    width: 100%;
+  }
 }
 
-#navbar ul {
-  display: flex;
-  width: 100%;
-}
 
 #navbar>ul>li {
   width: 33%;
@@ -61,7 +66,7 @@ body {
   color: red;
 }
 
-#my-info {
+#right-nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -82,7 +87,7 @@ body {
 }
 
 #sidemenu {
-  position: absolute;
+  position: fixed;
   width: 350px;
   height: 100%;
   top: 0px;
@@ -90,6 +95,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
 }
 
 #sidemenu i {
@@ -119,12 +125,15 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 75px;
+
+  li {
+    margin: 10px;
+  }
 }
 
 .linkto {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
-  margin: 5px;
   text-decoration: none;
   color: white;
   transition: color 0.25s;
@@ -137,7 +146,6 @@ body {
 .logout {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
-  margin: 5px;
   background: none;
   border: none;
   color: white;
@@ -177,6 +185,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 20px;
+  z-index: 3;
 }
 
 .modal-text {
@@ -192,6 +201,7 @@ body {
   }
 
   h3 {
+    margin: 10px;
     font-size: 20px;
   }
 
@@ -292,4 +302,22 @@ body {
   width: 250px;
   font-size: 15px;
   margin-top: 3px;
+}
+
+#nav-search {
+  border: none;
+  background: none;
+
+  i{
+    font-size: 30px;
+    transition: color 0.25s;
+  }
+
+  i:hover{
+    color: red;
+  }
+}
+
+#search-modal {
+  background-color:rgba(250, 247, 247, 0.639);
 }

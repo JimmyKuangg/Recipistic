@@ -5,6 +5,7 @@ import LoginFormContainer from '../session/login_container';
 import SignupFormContainer from '../user/signup/signup_container';
 import EditReviewFormContainer from '../recipes/reviews/edit/edit_review_form_container';
 import CreateReviewFormContainer from '../recipes/reviews/create/create_review_form_container';
+import SearchModal from '../search/search_modal';
 
 const mapStateToProps = state => ({
   modal: state.ui.modal
@@ -34,13 +35,16 @@ function Modal({modal, closeModal}) {
     case 'createReview':
       component = <CreateReviewFormContainer />
       break;
+    case 'search':
+      component = <SearchModal />
+      break;
     default: 
       return null;
   }
 
   return (
-    <div className="modal" onClick={closeModal}>
-      <div className="modal-form" onClick={e => e.stopPropagation()}>
+    <div className="modal" id={`${modal}-modal`} onClick={closeModal}>
+      <div className="modal-form" id={`${modal}-modal-form`}onClick={e => e.stopPropagation()}>
         { component }
       </div>
     </div>

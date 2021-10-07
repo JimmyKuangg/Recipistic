@@ -20,7 +20,7 @@ export default function RatingStars(props) {
     ratingsArr.push(filledStar);
   }
 
-  if (props.average % 1 === 0.5) {
+  if (props.average % 1 !== 0) {
     ratingsArr.push(halfFilledStar);
   }
 
@@ -28,6 +28,10 @@ export default function RatingStars(props) {
     ratingsArr.push(unfilledStar);
   }
 
+  if (!props.average) {
+    return ('')
+  } 
+  
   return (
     <ul className="rating-stars">
       {ratingsArr.map((rating, i) => (<li key={i}>{rating}</li>))}

@@ -46,7 +46,7 @@ export default class CreateReviewForm extends React.Component {
       <div className="modal-text">
         <h2>Recipistic</h2>
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <h4>Leave a Review</h4>
+          <h3>Leave a Review</h3>
           <textarea
             className="review-input"
             value={this.state.body}

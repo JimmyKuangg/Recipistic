@@ -9,6 +9,7 @@ import Sidemenu from './components/ui/sidemenu';
 import UserShowContainer from './components/user/show/user_show_container';
 import UserFavoritesContainer from './components/user/favorites/user_favorites_container';
 import RecipesShowContainer from './components/recipes/show/recipes_show_container';
+import RecipeIndex from './components/recipes/index/recipe_index';
 
 
 const App = () => (
@@ -18,10 +19,12 @@ const App = () => (
     <NavbarContainer />
 
     <Switch>
+      <Route path="/recipes?search=:search" component={RecipeIndex} />
       <ProtectedRoute path="/favorites" component={UserFavoritesContainer} />
       <Route exact path="/recipes/:id" component={RecipesShowContainer} />
       <Route exact path="/users/:id" component={UserShowContainer} />
-      <Route path='/' component={Home} />
+      <Route exact path="/recipes" component={RecipeIndex} />
+      <Route exact path='/' component={Home} />
       <Route component={RoutingError} />
     </Switch>
   </div>

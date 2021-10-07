@@ -1,0 +1,36 @@
+#searchbar-container {
+  margin-top: 10%;
+
+  button {
+    display: none;
+  }
+
+  input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    width: 500px;
+    height: 50px;
+  }
+}
+
+#search-modal-form {
+  width: 100%;
+  height: 100%;
+  background-color:rgba(245, 245, 245, 0.379);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-modal-text {
+
+  input {
+    width: 80vw;
+    background: transparent;
+    border: none;
+  }
+
+  button {
+    display: none;
+  }
+}

@@ -31,7 +31,7 @@ export default class UserFavorites extends React.Component {
                 />
               ))}
             </ul>
-          : <h2>You haven't saved any recipes! Click the heart icon found on recipes to save them!</h2>}
+          : <h2 id="none-saved">You haven't saved any recipes! Click the heart icon found on recipes to save them!</h2>}
         </div>
       </div>
     )

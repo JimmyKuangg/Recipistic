@@ -34,8 +34,6 @@ function RecipeReviews(props) {
       favoriteId = props.favorites[i].id;
     }
   }
-
-  console.log(props);
   
   return (
     <div id="recipe-reviews">
@@ -69,15 +67,17 @@ function RecipeReviews(props) {
 
       {props.reviews.map((review, i) => (
         <div className="user-review" key={i}>
-          <p>{review.body}</p>
-          <p>{review.user}</p>
+          <div id="review-item">
+            <h2>{review.body}</h2>
+            <h4>BY {review.user.toUpperCase()}</h4>
+          </div>
           {props.currentUser === review.reviewerId ? 
-            <div>
+            <div id="edit-and-delete">
               <button onClick={() => props.openModal('editReview')}>
-                Edit Review
+                <i className="fas fa-edit"></i>
               </button> 
               <button onClick={() => props.deleteReview(review.id).then(() => window.location.reload(true))}>
-                Delete Review
+                <i className="fas fa-trash-alt"></i>
               </button>
             </div>
             : ''}

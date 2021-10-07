@@ -1,4 +1,4 @@
-json.extract! @recipe, :id, :title, :body, :servings, :public
+json.extract! @recipe, :id, :title, :body, :servings, :public, :user_id
 # json.photoUrl url_for(@recipe.photo);
 
 #Average rating
@@ -39,10 +39,14 @@ json.reviews do
   end
 end
 
-json.user_favorites do
-  current_user.favorites.each do |favorite|
-    json.set! favorite.id do
-      json.extract! favorite, :id, :recipe_id
+if !current_user.favorites.empty?
+  json.user_favorites do 
+    current_user.favorites.each do |favorite|
+      json.set! favorite.id do
+        json.extract! favorite, :id, :recipe_id
+      end
     end
   end
+else 
+  json.user_favorites []
 end

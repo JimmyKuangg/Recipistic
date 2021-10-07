@@ -34,20 +34,24 @@ export default class Navbar extends React.Component {
     }
   }
 
-  fetchHyperlinks(){
+  rightNav(){
     return(
-    <div id="my-info">
+    <div id="right-nav">
       <a className="info-link" href="https://github.com/JimmyKuangg/Recipistic">
         <i className="fab fa-github" />
       </a>
       <a className="info-link" href="https://www.linkedin.com/in/jimmy-kuang-789967183/">
         <i className="fab fa-linkedin"/>
       </a>
+      {this.props.location.pathname !== "/recipes" ? 
+        <button id="nav-search" onClick={() => this.props.openModal('search')}><i className="fas fa-search"></i></button>
+      : ''}
     </div>
     )
   }
 
   render() {
+    console.log(this.props);
     return (
       <div id="navbar">
         <ul>
@@ -60,7 +64,7 @@ export default class Navbar extends React.Component {
             </button>
           </li>
           <li>
-            {this.fetchHyperlinks()}
+            {this.rightNav()}
           </li>
         </ul>
       </div>

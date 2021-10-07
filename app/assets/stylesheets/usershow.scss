@@ -1,10 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Merriweather&family=Roboto+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
-$merriweather: 'Merriweather', serif;
-
 #user-show {
-  font-family: $merriweather;
+  font-family: 'Merriweather', serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,6 +77,10 @@ i {
   width: 100%;
   height: 100%;
   border: 0;
+
+  h1 {
+    text-align: center;
+  }
 }
 
 .recipe-showcase > div {

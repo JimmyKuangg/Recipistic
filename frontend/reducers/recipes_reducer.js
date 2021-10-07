@@ -1,5 +1,5 @@
 import { FETCH_USER } from "../actions/user_actions";
-import { CLEAR_RECIPE, FETCH_RECIPE } from "../actions/recipe_actions";
+import { CLEAR_RECIPE, FETCH_ALL_RECIPES, FETCH_RECIPE } from "../actions/recipe_actions";
 import { FETCH_REVIEW, REMOVE_REVIEW } from "../actions/review_actions";
 
 const RecipesReducer = (oldState = {}, action) => {
@@ -12,6 +12,8 @@ const RecipesReducer = (oldState = {}, action) => {
       } else {
         return {};
       }
+    case FETCH_ALL_RECIPES:
+      return action.recipes;
     case FETCH_RECIPE:
       return action.recipe;
     case FETCH_REVIEW:

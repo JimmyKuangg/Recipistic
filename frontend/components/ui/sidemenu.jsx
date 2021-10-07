@@ -25,6 +25,14 @@ function Sidemenu({sidemenu, loggedIn, currentUserId, logout, closeSidemenu}) {
       <button id="close-sidemenu" onClick={closeSidemenu}>X</button>
       <span><i className="fas fa-utensils"></i></span>
       <ul id="sidemenu-links">
+        <li>
+          <Link
+            className="linkto"
+            to={`/recipes`}
+            onClick={closeSidemenu}
+          >ALL RECIPES
+          </Link>
+        </li>
         {loggedIn ? 
           <li>
             <Link 

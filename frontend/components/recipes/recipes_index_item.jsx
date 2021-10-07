@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom'
 export default function RecipesIndexItem(props) {
   return (
     <li className="recipe-item">
-      <Link to={`/recipes/${props.id}`} className="recipe-showcase">
+      <Link to={`/recipes/${props.recipe.id}`} className="recipe-showcase">
         <div>
-          <h2><i className="fas fa-hamburger"></i></h2>
+          <h1><i className="fas fa-hamburger"></i></h1>
           <div className="recipe-show-details">
-            <h2>{props.title}</h2>
+            <h2>{props.recipe.title}</h2>
           </div>
           <div className="reviews-and-ratings">
-            {props.average ? <p>{props.average.toFixed(1)}/5.0</p> : <p>NO RATINGS</p>}
-            <p>REVIEWS({props.numReviews})</p>
+            {props.recipe.average ? <p>{props.recipe.average.toFixed(1)}/5.0</p> : <p>NO RATINGS</p>}
+            <p>REVIEWS({props.recipe.numReviews})</p>
           </div>
         </div>
       </Link>

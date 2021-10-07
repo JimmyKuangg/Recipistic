@@ -2,7 +2,9 @@ import React from 'react'
 
 function RoutingError() {
   return(
-    <div>404: Page not found</div>
+    <div id="routing-error">
+      404: Page not found
+    </div>
   )
 }
 
