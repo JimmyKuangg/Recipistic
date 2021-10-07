@@ -5,7 +5,7 @@ class Review < ApplicationRecord
 
   def correct_rating 
     if (rating && !rating.between?(1, 5))
-      return false
+      render json: ["Please make your rating between 1 and 5"]
     end
   end
 

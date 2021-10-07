@@ -21,6 +21,7 @@ class Api::ReviewsController < ApplicationController
   def destroy
     @review = Review.find_by(id: params[:id])
     if @review
+      render :show
       @review.destroy
     else
       render json: ["No review found with that id"]

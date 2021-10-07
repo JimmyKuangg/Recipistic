@@ -12,7 +12,7 @@ import RecipesShowContainer from './components/recipes/show/recipes_show_contain
 
 
 const App = () => (
-  <div>
+  <div id="main">
     <Modal />
     <Sidemenu />
     <NavbarContainer />
@@ -24,7 +24,6 @@ const App = () => (
       <Route path='/' component={Home} />
       <Route component={RoutingError} />
     </Switch>
-
   </div>
 )
 

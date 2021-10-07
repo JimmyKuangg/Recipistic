@@ -1,5 +1,5 @@
 import React from 'react'
-import UserRecipesContainer from '../recipes/user_recipes_container';
+import RecipesIndexItem from '../../recipes/recipes_index_item';
 
 export default class UserShow extends React.Component {
   constructor(props){
@@ -21,6 +21,7 @@ export default class UserShow extends React.Component {
       return 'user doesn"t exist';
     }
 
+
     return (
       <div id="user-show">
         <header id="user-header"> 
@@ -29,7 +30,20 @@ export default class UserShow extends React.Component {
           <h2>{this.props.user.username}</h2>
         </header>
         {this.props.user.bio ? <p id="user-bio">{this.props.user.bio}</p> : ''}
-        <UserRecipesContainer username={this.props.user.username} />
+        <div id="user-recipe-container">
+          <h1>{this.props.user.username}'s recipes</h1>
+            <ul id="users-recipes">
+              {this.props.recipes.map((recipe, i) => (
+                <RecipesIndexItem 
+                  id={recipe.id}
+                  title={recipe.title} 
+                  average={recipe.average}
+                  numReviews={recipe.numReviews}
+                  key={i} 
+                />
+              ))}
+            </ul>
+        </div>
       </div>
     )
   }

@@ -1,5 +1,5 @@
 import React from 'react'
-import RecipesIndexItem from '../../recipes/recipes_index_item';
+import RecipesFavoriteItem from './recipes_favorite_item';
 
 export default class UserFavorites extends React.Component {
 
@@ -17,13 +17,22 @@ export default class UserFavorites extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Your Favorites;</h1>
-        <ul>
-          {this.props.favorites.map((favorite, i) => (
-            <h1>hello!</h1>
-          ))}
-        </ul>
+      <div className="favorites-page">
+        <div className="favorites-container">
+          <h1>My Saved Recipes</h1>
+          {this.props.favorites.length !== 0 ? 
+            <ul className="favorites-listing">
+              {this.props.favorites.map((favorite, i) => (
+                <RecipesFavoriteItem
+                  id={favorite.id}
+                  title={favorite.title}
+                  author={favorite.author}
+                  key={i} 
+                />
+              ))}
+            </ul>
+          : <h2>You haven't saved any recipes! Click the heart icon found on recipes to save them!</h2>}
+        </div>
       </div>
     )
   }

@@ -17,6 +17,6 @@ export const createReview = review => (
 export const expungeReview = reviewId => (
   $.ajax({
     method: 'DELETE',
-    url: `/api/reviews/${reviewId}`
+    url: `/api/reviews/${reviewId}`,
   })
 )

@@ -28,7 +28,7 @@ export default class RecipesShow extends React.Component {
     if (this.props.recipe === {}) {
       return 'no recipe found';
     } 
-    
+    console.log(this.props);
     return (
       <div id="recipe-show">
         <div id="recipe-header">

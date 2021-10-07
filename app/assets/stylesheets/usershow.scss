@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Merriweather&family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+$merriweather: 'Merriweather', serif;
+
 #user-show {
-  font-family: 'Merriweather', serif;
+  font-family: $merriweather;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   font-size: 20px;
 }
@@ -36,13 +38,15 @@ i {
 #user-bio {
   padding-top: 40px;
   padding-bottom: 40px;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 #user-recipe-container {
   background-color: #F1F2F2;
   padding-top: 50px;
+  margin-top: 15px;
   width: 100vw;
+  padding-bottom: 8vh;
   text-align: center;
   display: flex;
   flex-direction: column;

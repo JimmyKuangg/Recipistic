@@ -3,8 +3,9 @@ import { receiveRecipe } from "../../../actions/recipe_actions";
 import { findUser } from "../../../actions/user_actions";
 import UserShow from "./user_show";
 
-const mapStateToProps = (state, ownProps) => ({
-  user: state.entities.users[ownProps.match.params.id],
+const mapStateToProps = state => ({
+  user: state.entities.users,
+  recipes: Object.values(state.entities.recipes)
 })
 
 const mapDispatchToProps = dispatch => ({

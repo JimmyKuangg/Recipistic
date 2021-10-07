@@ -79,6 +79,7 @@
 #recipe-reviews {
   display: flex;
   flex-direction: column;
+  padding-bottom: 30px;
 }
 
 .user-review {
@@ -114,3 +115,39 @@
   }
 }
 
+.review-favorite-buttons {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 200px;
+  height: 20vh;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgba(83, 83, 84, 0.543);
+
+  i {
+    font-size: 50px;
+  }
+}
+
+.review-button{
+  background: none;
+  border: none;
+  transition: color 0.25s;
+}
+
+.review-button:hover {
+    color: red;
+}
+
+#filled-heart {
+  color: red;
+  transition: color 0.25s;
+}
+
+#filled-heart:hover {
+  color: white;
+}

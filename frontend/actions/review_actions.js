@@ -21,6 +21,7 @@ export const newReview = review => dispatch => (
   ReviewApiUtil.createReview(review)
   .then(review => dispatch(fetchReview(review)))
 )
+
 export const deleteReview = reviewId => dispatch => (
   ReviewApiUtil.expungeReview(reviewId)
   .then(() => dispatch(removeReview(reviewId)))
