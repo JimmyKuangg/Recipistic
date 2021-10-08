@@ -24,7 +24,7 @@ To effectively grab everything that was required to render on each of the show p
 
 Here's what the recipe's show Jbuilder looks like currently: 
 
-`
+```
 json.extract! @recipe, :id, :title, :body, :servings, :user_id
 json.photoUrl url_for(@recipe.photo);
 
@@ -77,4 +77,4 @@ if current_user && !current_user.favorites.empty?
 else 
   json.user_favorites []
 end
-`
+```
