@@ -24,7 +24,7 @@ To effectively grab everything that was required to render on each of the show p
 
 Here's what the recipe's show Jbuilder looks like currently: 
 
-```
+```ruby
 json.extract! @recipe, :id, :title, :body, :servings, :user_id
 json.photoUrl url_for(@recipe.photo);
 
@@ -78,3 +78,9 @@ else
   json.user_favorites []
 end
 ```
+
+With this coming in as one object, many reducers and slices of state were required to allow everything within the oncoming payload to be reduced to a flat state shape. With each feature added, reducers were created if they needed to be and each of those reducers required all had a case to listen for the exact same action. In the end, the state was flat and easy to grab info out of in the show component.
+
+## Search
+
+The search functionality allows users to search for recipes based on their input to the search bar or search modal. The problem that occured was 
