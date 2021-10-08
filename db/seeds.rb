@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
+
 # Users #########################################
 user_1 = User.create!({
   username: 'demouser',
@@ -56,6 +58,8 @@ recipe_1 = Recipe.create!({
   servings: 6,
   user_id: 2
 })  
+recipe_1_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/pho.jpg)
+recipe_1.photo.attach(io: recipe_1_photo, filename: 'pho.jpg')
 
 recipe_2 = Recipe.create!({
   title: 'Spaghetti Aglio E Olio',
@@ -63,6 +67,8 @@ recipe_2 = Recipe.create!({
   servings: 4,
   user_id: 2
 })  
+recipe_2_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/aglio.jpg)
+recipe_2.photo.attach(io: recipe_2_photo, filename: 'aglio.jpg')
 
 recipe_3 = Recipe.create!({
   title: 'Malasadas',
@@ -70,6 +76,8 @@ recipe_3 = Recipe.create!({
   servings: 4,
   user_id: 1
 })  
+recipe_3_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/malasadas.jpg)
+recipe_3.photo.attach(io: recipe_3_photo, filename: 'malasadas.jpg')
 
 recipe_4 = Recipe.create!({
   title: 'Greek Dolmades',
@@ -77,6 +85,8 @@ recipe_4 = Recipe.create!({
   servings: 6,
   user_id: 4
 })  
+recipe_4_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/dolmades.jpg)
+recipe_4.photo.attach(io: recipe_4_photo, filename: 'dolmades.jpg')
 
 recipe_5 = Recipe.create!({
   title: 'Simple Borscht',
@@ -84,42 +94,54 @@ recipe_5 = Recipe.create!({
   servings: 6,
   user_id: 3
 })  
+recipe_5_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/borscht.jpg)
+recipe_5.photo.attach(io: recipe_5_photo, filename: 'borscht.jpg')
 
 recipe_6 = Recipe.create!({
   title: 'Caprese Salad',
-  body: 'A simple italian salad consisting of tomato, mozarella, and herbs',
+  body: 'A simple italian salad consisting of tomato, mozarella, and herbs.',
   servings: 1,
   user_id: 5
 })  
+recipe_6_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/caprese.jpg)
+recipe_6.photo.attach(io: recipe_6_photo, filename: 'caprese.jpg')
 
 recipe_7 = Recipe.create!({
   title: 'Ratatouille',
-  body: 'Confit Byaldi, or Ratatouille as it was popularized from the movie, is a stunning dish of beautifully arranged vegetables. This showstopper of a dish will melt even the coldest of hearts',
+  body: 'Confit Byaldi, or Ratatouille as it was popularized from the movie, is a stunning dish of beautifully arranged vegetables. This showstopper of a dish will melt even the coldest of hearts.',
   servings: 8,
   user_id: 4
 })  
+recipe_7_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/ratatouille.jpg)
+recipe_7.photo.attach(io: recipe_7_photo, filename: 'ratatouille.jpg')
 
 recipe_8 = Recipe.create!({
-  title: 'Bacon and Potato Breakfast Hash',
-  body: 'This hearty dish of bacon and potatoes is sure to give you enough energy to start your day',
+  title: 'Pork and Potato Hash',
+  body: 'This hearty dish of pork, potatoes, and mixed vegetables will leave you feeling stuffed and ready for a nap right after.',
   servings: 4,
   user_id: 6
 })  
+recipe_8_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/potato_hash.jpeg)
+recipe_8.photo.attach(io: recipe_8_photo, filename: 'potato_hash.jpeg')
 
 recipe_9 = Recipe.create!({
   title: 'Pad See Ew',
-  body: 'Sweet and savory stir fried flat rice noodles from Thailand',
+  body: 'Sweet and savory stir fried flat rice noodles from Thailand.',
   servings: 4,
   user_id: 2
 })
-
+recipe_9_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/pad_see_ew.jpg)
+recipe_9.photo.attach(io: recipe_8_photo, filename: 'pad_see_ew.jpg')
+  
 recipe_10 = Recipe.create!({
   title: 'Apple Pie',
-  body: 'Classic American apple pie that will be the perfect way to end any meal',
+  body: 'Classic American apple pie that will be the perfect way to end any meal.',
   servings: 8,
   user_id: 6
 })
-
+recipe_10_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/apple_pie.jpg)
+recipe_10.photo.attach(io: recipe_8_photo, filename: 'apple_pie.jpg')
+    
 # Ingredients ###################################
 # Recipe 1 ingredients 
 Ingredient.create!({
@@ -401,6 +423,10 @@ Ingredient.create!({
   recipe_id: 5
 })
 
+Ingredient.create!({
+  description: 'Sour cream for topping',
+  recipe_id: 5
+})
 # Recipe 6 ingredients
 Ingredient.create!({
   description: '3 large tomatoes, sliced into 1/4 inch slices',
@@ -490,7 +516,7 @@ Ingredient.create!({
 })
 
 Ingredient.create!({
-  description: '8 strips of bacon',
+  description: '1/2 lb pork loin, chopped into small pieces',
   recipe_id: 8
 })
 
@@ -500,12 +526,22 @@ Ingredient.create!({
 })
 
 Ingredient.create!({
-  description: '4 large eggs',
+  description: '1 yellow bell pepper, de-seeded and sliced into chunks',
+  recipe_id: 8
+})
+
+Ingredient.create!({
+  description: '1 tomato cut into eight sections',
   recipe_id: 8
 })
 
 Ingredient.create!({
   description: '2 stalks of green onion. chopped finely',
+  recipe_id: 8
+})
+
+Ingredient.create!({
+  description: 'One sprig of rosemary',
   recipe_id: 8
 })
 
@@ -523,6 +559,15 @@ Ingredient.create!({
 Ingredient.create!({
   description: '2 eggs, scrambled',
   recipe_id: 9
+})
+
+Ingredient.create!({
+  description: '1/2 lb of beef, cut into thin strips',
+  recipe_id: 9
+})
+
+Ingredient.create!({
+  description: '1/2 cup of chinese broccoli, halved vertically and cut into logs'
 })
 
 Ingredient.create!({
@@ -795,7 +840,7 @@ Step.create!({
 })
 
 Step.create!({
-  description: 'Add the tomatoes and simmer for another 10 minutes. Once 10 minutes have passed, turn the stove off and mix in some of the dill. When serving, add more dill on top.',
+  description: 'Add the tomatoes and simmer for another 10 minutes. Once 10 minutes have passed, turn the stove off and mix in some of the dill. When serving, add sour cream and more dill on top.',
   recipe_order: 4,
   recipe_id: 5
 })
@@ -858,31 +903,31 @@ Step.create!({
 })
 
 Step.create!({
-  description: 'After the potatoes are tender and golden brown, remove them from the skillet and set aside. Clean the skillet and bring it back onto the stove over medium high heat. Add your bacon to the skillet and cook it until the bacon becomes crispy.',
+  description: 'After the potatoes are tender and golden brown, remove them from the skillet and set aside. Clean the skillet and bring it back onto the stove over medium high heat. Add your pork to the skillet and cook it until the pork becomes golden brown.',
   recipe_order: 2,
   recipe_id: 8
 })
 
 Step.create!({
-  description: 'When crispy, remove the bacon and keep the bacon grease. Set the bacon aside on a paper towel to drain. When cooled, chop the bacon up into tiny pieces.',
+  description: 'When the pork is fully cooked, remove the pork and keep the grease. Set the pork aside on a paper towel to drain.',
   recipe_order: 3,
   recipe_id: 8
 })
 
 Step.create!({
-  description: 'With the bacon removed, add your cooked potatoes back into the same skillet and set the heat to low. Add your bacon bits and mix well.',
+  description: 'With the pork removed, add your white onion and bell pepper back into the same skillet and set the heat to low. Slowly cook the veggies until the onions become slightly translucent. Once ready, add your potatoes into the skillet.',
   recipe_order: 4,
   recipe_id: 8
 })
 
 Step.create!({
-  description: 'Create 4 small pockets in your potato bacon mixture. In those pockets, crack your eggs into those pockets and cover with a lid for about 5 minutes.',
+  description: 'Add the pork and the tomatoes back to the skillet to heat back up. Mix everything well to ensure that all ingredients are thoroughly spread out.',
   recipe_order: 5,
   recipe_id: 8
 })
 
 Step.create!({
-  description: 'Add your green onions and serve the dish in the skillet itself.',
+  description: 'Turn off the heat after about two minutes. Carefully add your rosemary and your green onions and serve the dish in the skillet itself.',
   recipe_order: 6,
   recipe_id: 8
 })
@@ -901,20 +946,26 @@ Step.create!({
 })
 
 Step.create!({
-  description: 'Add your eggs and allow it to cook. Try not to mix, cook, or agitate the eggs too much. Once the edge of egg mixture has set while the middle is still runny, add your rice noodles.',
+  description: 'Add the beef and chinese broccoli and cook them until the beef has changed to a light brown color.',
   recipe_order: 3,
   recipe_id: 9
 })
 
 Step.create!({
-  description: 'Toss everything together, making sure that everything is evenly mixed. Once ready, add your sauce and mix well. Continue to cook for about a minute, or until the noodles are to the texture of your preference.',
+  description: 'Add your eggs and allow it to cook. Try not to mix, cook, or agitate the eggs too much. Once the edge of egg mixture has set while the middle is still runny, add your rice noodles.',
   recipe_order: 4,
   recipe_id: 9
 })
 
 Step.create!({
-  description: 'Plate the noodles on a dish and serve.',
+  description: 'Toss everything together, making sure that everything is evenly mixed. Once ready, add your sauce and mix well. Continue to cook for about a minute, or until the noodles are to the texture of your preference.',
   recipe_order: 5,
+  recipe_id: 9
+})
+
+Step.create!({
+  description: 'Plate the noodles on a dish and serve.',
+  recipe_order: 6,
   recipe_id: 9
 })
 

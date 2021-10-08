@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Merriweather&family=Roboto+Slab&display=swap');
 
 body {
-  background-color: white;
+  background-color: rgb(250, 250, 250);
   padding-top: 5px;
   overflow-x: hidden;
 }
@@ -12,6 +12,7 @@ body {
   top: 0;
   width: 100vw;
   background-color: rgb(250, 247, 247);
+  padding: 10px;
 
   ul {
     display: flex;
@@ -321,4 +322,11 @@ body {
 
 #search-modal {
   background-color:rgba(250, 247, 247, 0.639);
+}
+
+#popular-recipes {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  margin: 50px;
+  font-size: 40px;
 }

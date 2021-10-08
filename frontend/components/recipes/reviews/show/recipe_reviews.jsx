@@ -8,6 +8,7 @@ const mapStateToProps = state => ({
   favorites: Object.values(state.entities.favorites),
   currentRecipe: state.entities.recipes.id,
   sideMenu: state.ui.sidemenu,
+  currentUser: state.session.id,
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -39,7 +40,7 @@ function RecipeReviews(props) {
     <div id="recipe-reviews">
       <h1 className="instruction-header">Reviews</h1>
 
-      {!props.sideMenu ? 
+      {(!props.sideMenu && props.currentUser) ? 
         <div className="review-favorite-buttons">
           {!reviewPosted ?
             <button 

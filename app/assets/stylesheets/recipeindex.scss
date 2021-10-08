@@ -14,3 +14,21 @@
   margin-top: 5%;
   min-height: 100%;
 }
+
+#recipe-average {
+  color: red;
+}
+
+#num-reviews {
+  display: inline;
+  color: green;
+  text-align: center;
+}
+
+#home-recipes-index {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 10%;
+  padding-right: 10%;
+}
