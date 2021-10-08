@@ -83,4 +83,36 @@ With this coming in as one object, many reducers and slices of state were requir
 
 ## Search
 
-The search functionality allows users to search for recipes based on their input to the search bar or search modal. The problem that occured was 
+The search functionality allows users to search for recipes based on their input to the search bar or search modal. The problem that occured was thinking of algorithm that could search through all the recipes without being too high in time-complexity. In the end, the algorithm came out to be about O(n^3), which isn't the greatest, but allows users to look for recipes based on the title of the recipes.
+
+```javascript
+filterRecipes() {
+    if (!this.props.location.search.includes('=') || this.props.location.search.split('=').length !== 2) {
+      return this.props.recipes;
+    }
+
+    let searchKeyWords= this.props.location.search.split('=')[1].split('%20'); //Split the search query by the spaces
+    let recipeTitleSplit;
+    let currentRecipe;
+    let currentTitleWord;
+    let filteredRecipes = [];
+
+    for(let i = 0; i < this.props.recipes.length; i++){
+      recipeTitleSplit = this.props.recipes[i].title.split(' ');
+      currentRecipe = this.props.recipes[i];
+
+      for(let j = 0; j < recipeTitleSplit.length; j++){
+        currentTitleWord = recipeTitleSplit[j];
+
+        for(let l = 0; l < searchKeyWords.length; l++){
+
+          if (currentTitleWord.toLowerCase().includes(searchKeyWords[l].toLowerCase()) && !filteredRecipes.includes(currentRecipe)) {
+            filteredRecipes.push(currentRecipe);
+          }
+        }
+      }
+    }
+
+    return filteredRecipes;
+  }
+  ```
