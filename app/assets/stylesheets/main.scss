@@ -95,7 +95,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 2;
+  z-index: 1;
 }
 
 #sidemenu i {
@@ -175,6 +175,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999;
 }
 
 .modal-form {

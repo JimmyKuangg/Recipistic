@@ -2,9 +2,9 @@ class Api::RecipesController < ApplicationController
 
   def index
     if (params[:user_id])
-      @recipes = Recipe.where(user_id: params[:user_id]).where(public: true)
+      @recipes = Recipe.where(user_id: params[:user_id])
     else
-      @recipes = Recipe.all.where(public: true)
+      @recipes = Recipe.all
     end
 
     if @recipes
@@ -36,6 +36,6 @@ class Api::RecipesController < ApplicationController
 
   private
   def recipe_params
-    params.require(:recipe).permit(:title, :body, :servings, :user_id, :public)
+    params.require(:recipe).permit(:title, :body, :servings, :user_id)
   end
 end

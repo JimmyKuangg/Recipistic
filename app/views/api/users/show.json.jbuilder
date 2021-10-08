@@ -3,7 +3,7 @@ json.extract! @user, :id, :username, :bio
 json.recipes do 
   @user.recipes.each.with_index do |recipe, idx|
     json.set! recipe.id do 
-      json.extract! recipe, :id, :title, :body, :servings, :public
+      json.extract! recipe, :id, :title, :body, :servings
 
       reviews = recipe.reviews
       json.numReviews reviews.length

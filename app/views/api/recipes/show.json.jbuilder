@@ -1,4 +1,4 @@
-json.extract! @recipe, :id, :title, :body, :servings, :public, :user_id
+json.extract! @recipe, :id, :title, :body, :servings, :user_id
 # json.photoUrl url_for(@recipe.photo);
 
 #Average rating

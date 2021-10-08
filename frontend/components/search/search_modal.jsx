@@ -34,14 +34,15 @@ class SearchModal extends React.Component{
     return (
       <div className="search-modal-text">
         <form onSubmit={this.handleSubmit}>
-           <input 
+          <button type="submit"><i class="fas fa-search"></i></button>
+          <input 
             type="text"
             value={this.state.search}
             placeholder="Find a recipe"
             onChange={this.handleUpdate}
           />
-          <button type="submit">Submit</button>
         </form>
+        <button id="close-search-modal" onClick={() => this.props.closeModal()}>X</button>
       </div>
     )
   }

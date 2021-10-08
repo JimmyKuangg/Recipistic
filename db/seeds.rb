@@ -48,97 +48,76 @@ user_6 = User.create!({
   password: 'rusticcook123',
   bio: "Nothing tastes better than when its cooked outside in the wilderness."
 })  
-    
-# Favorites
-Favorite.create!({
-  user_id: 1,
-  recipe_id: 1
-})
-
-Favorite.create!({
-  user_id: 1,
-  recipe_id: 2
-})
 
 # Recipes #######################################
 recipe_1 = Recipe.create!({
-  title: 'Pho Dac Biet',
-  body: 'A hot beef based soup with rice noodles hailing from Vietnam',
+  title: 'Beef Pho',
+  body: 'A Vietnamese noodle soup consisting of beef bone broth, rice noodles, thinly sliced meat, and various herbs. This variation may not contain all the toppings as a traditional pho, but it will still leave you full and happy.',
   servings: 6,
-  user_id: 2,
-  public: true
+  user_id: 2
 })  
 
 recipe_2 = Recipe.create!({
   title: 'Spaghetti Aglio E Olio',
-  body: 'Translated simply as spaghetti with garlic and oil, this simple garlic rich pasta dish will be sure to impress anyone.',
+  body: 'Translated  as spaghetti with garlic and oil, this simple garlic rich pasta dish will be sure to impress anyone.',
   servings: 4,
-  user_id: 2,
-  public: true
+  user_id: 2
 })  
 
 recipe_3 = Recipe.create!({
   title: 'Malasadas',
-  body: 'Portuguese fried dough found in Hawaii, this fried pastry will surely satisfy your sweet tooth.',
+  body: 'Portuguese fried dough found in Hawaii, this pillowy fried pastry will surely satisfy your sweet tooth.',
   servings: 4,
-  user_id: 1,
-  public: true
+  user_id: 1
 })  
 
 recipe_4 = Recipe.create!({
   title: 'Greek Dolmades',
   body: 'Little appetizers of herby mixed rice wrapped in grape leaves that will have you picking at it for more.',
   servings: 6,
-  user_id: 4,
-  public: true
+  user_id: 4
 })  
 
 recipe_5 = Recipe.create!({
   title: 'Simple Borscht',
   body: 'A Ukranian beet soup that will warm your body as much as it stains your hands.',
   servings: 6,
-  user_id: 3,
-  public: true
+  user_id: 3
 })  
 
 recipe_6 = Recipe.create!({
   title: 'Caprese Salad',
   body: 'A simple italian salad consisting of tomato, mozarella, and herbs',
   servings: 1,
-  user_id: 5,
-  public: true
+  user_id: 5
 })  
 
 recipe_7 = Recipe.create!({
   title: 'Ratatouille',
-  body: 'A stunning dish of beautifully arranged vegetables, this showstopper of a dish will melt even the coldest of hearts',
+  body: 'Confit Byaldi, or Ratatouille as it was popularized from the movie, is a stunning dish of beautifully arranged vegetables. This showstopper of a dish will melt even the coldest of hearts',
   servings: 8,
-  user_id: 4,
-  public: true
+  user_id: 4
 })  
 
 recipe_8 = Recipe.create!({
   title: 'Bacon and Potato Breakfast Hash',
   body: 'This hearty dish of bacon and potatoes is sure to give you enough energy to start your day',
   servings: 4,
-  user_id: 6,
-  public: true
+  user_id: 6
 })  
 
 recipe_9 = Recipe.create!({
   title: 'Pad See Ew',
   body: 'Sweet and savory stir fried flat rice noodles from Thailand',
   servings: 4,
-  user_id: 2,
-  public: true
+  user_id: 2
 })
 
 recipe_10 = Recipe.create!({
   title: 'Apple Pie',
   body: 'Classic American apple pie that will be the perfect way to end any meal',
   servings: 8,
-  user_id: 6,
-  public: true
+  user_id: 6
 })
 
 # Ingredients ###################################
@@ -154,7 +133,7 @@ Ingredient.create!({
 })
 
 Ingredient.create!({
-  description: '1 large head of garlic, halved horizontally',
+  description: '1 large bulb of garlic, halved horizontally',
   recipe_id: 1
 })
 
@@ -209,7 +188,7 @@ Ingredient.create!({
 })
 
 Ingredient.create!({
-  description: '3 stalks of green onion, finely chopped, more to taste',
+  description: '3 stalks of green onion, finely chopped',
   recipe_id: 1
 })
 
@@ -235,17 +214,17 @@ Ingredient.create!({
 })
 
 Ingredient.create!({
-  description: '1/2 tbsp of red pepper flakes, more to taste',
+  description: '1/2 tbsp of red pepper flakes',
   recipe_id: 2
 })
 
 Ingredient.create!({
-  description: '1/2 tsp of salt. more to taste',
+  description: '1/2 tsp of salt',
   recipe_id: 2
 })
 
 Ingredient.create!({
-  description: '1/2 tsp of ground black pepper. more to taste',
+  description: '1/2 tsp of ground black pepper',
   recipe_id: 2
 })
 
@@ -296,12 +275,12 @@ Ingredient.create!({
 })
 
 Ingredient.create!({
-  description: '1/2 cup for dough, more for coating',
+  description: '1/2 cup of sugar for the dough, more for coating',
   recipe_id: 3
 })
 
 Ingredient.create!({
-  description: 'Enough to deep fry',
+  description: 'Enough oil to deep fry',
   recipe_id: 3
 })
 
@@ -413,7 +392,7 @@ Ingredient.create!({
 })
 
 Ingredient.create!({
-  description: 'One can of stewed tomatoes',
+  description: '1 can of stewed tomatoes',
   recipe_id: 5
 })
 
@@ -424,12 +403,12 @@ Ingredient.create!({
 
 # Recipe 6 ingredients
 Ingredient.create!({
-  description: '3 large tomatoes, sliced thickly',
+  description: '3 large tomatoes, sliced into 1/4 inch slices',
   recipe_id: 6
 })
 
 Ingredient.create!({
-  description: '1 lb of mozzarella, sliced thickly',
+  description: '1 lb of mozzarella, sliced into 1/4 inch slices',
   recipe_id: 6
 })
 
@@ -620,209 +599,203 @@ Ingredient.create!({
 # Steps #########################################
 # Recipe 1 steps
 Step.create!({
-  description: 'Add the bones into a pot of water and cover the pot with enough water to cover all the bones. Bring pot to a boil and let boil for 30 minutes.',
+  description: 'Add the bones into a pot of water and cover the pot with enough water to cover all the bones. Put the pot on a stove bring it to a boil and let it boil for 30 minutes.',
   recipe_order: 1,
   recipe_id: 1
 })
 
 Step.create!({
-  description: 'While the bones are blanching, toast the garlic, ginger, and halved onions in the oven. Lightly toast the cinnamon sticks, star anise, and peppercorns in a pan on low heat until fragrant.',
+  description: 'While the bones are blanching, toast the garlic, ginger, and halved onions in the oven. Lightly toast the cinnamon sticks, star anise, and peppercorns in a pan on low heat until they are fragrant.',
   recipe_order: 2,
   recipe_id: 1
 })
 
 Step.create!({
-  description: 'After the bones have been boiled for 30 minutes, drain the water and clean the bones with water.',
+  description: 'After the bones have been boiled for 30 minutes, drain the water and clean the bones with running water. Wash and rinse them thoroughly.',
   recipe_order: 3,
   recipe_id: 1
 })
 
 Step.create!({
-  description: 'Add the cleaned bones, brisket, ginger, garlic, onions, and spices into a pot and add enough water to cover everything. Bring the pot to a boil.',
+  description: 'Add the cleaned bones, brisket, toasted ginger, garlic, onions, and spices into a pot and add enough water to cover everything. Bring the pot to a boil.',
   recipe_order: 4,
   recipe_id: 1
 })
 
 Step.create!({
-  description: 'Once boiling, set the heat to low and let the pot simmer for the next 3 - 4 hours. Occasionally, skim the scum off the top of the broth and check the brisket. If the brisket is fork tender, remove it and set it aside to chill.',
+  description: 'Once boiling, set the heat to low and let the pot simmer for the next 3 - 4 hours. Occasionally, skim the scum off the top of the broth and check on the brisket inside. If the brisket is fork tender, remove it and set it aside to cool. When it has reached room temperature, place the brisket into the fridge until you are ready to serve.',
   recipe_order: 5,
   recipe_id: 1
 })
 
 Step.create!({
-  description: 'After 3-4 hours, strain all the soup into another pot and bring back to a boil. Season the broth with fish sauce and salt.',
+  description: 'After 3-4 hours, strain all the soup into another pot and bring the strained broth back to a boil. Season the broth with fish sauce and salt.',
   recipe_order: 6,
   recipe_id: 1
 })
 
 Step.create!({
-  description: 'Cook the noodles in accordance to the packaging instructions. When cooked, add to a bowl. Add your raw sliced beef on top along with the bean sprouts, green onions, cilantro, and julienned onions.',
+  description: 'Cook the noodles in accordance to the packaging instructions. When cooked, strain the noodles from the pot and add some noodles to a bowl. Take the chilled brisket and slice it into 1/4 inch slices. Top the noodles with the slices of brisket, raw sliced beef, bean sprouts, green onions, cilantro, and julienned onions',
   recipe_order: 7,
   recipe_id: 1
 })
 
 Step.create!({
-  description: 'Take your chilled brisket and slice it into 1/2 inch slices. Add them to your bowl.',
+  description: 'Pour the boiling hot broth on top of the noodles with toppings and watch the raw beef get cooked as the boiling hot broth hits it. Enjoy!',
   recipe_order: 8,
-  recipe_id: 1
-})
-
-Step.create!({
-  description: 'Pour the boiling hot broth on top and watch the raw beef get cooked as the broth hits it. Enjoy!',
-  recipe_order: 9,
   recipe_id: 1
 })
 
 # Recipe 2 steps
 Step.create!({
-  description: 'Boil the spaghetti noodles in salted water slightly before fully cooked, as they will finish in the pan. Save about 1/4 cup of the pasta water.',
+  description: 'Get a pot of water and bring it to a boil. When boiling, salt the water and add the spaghetti noodles into the salted water, Cook the pasta until slightly before fully cooked, as they will finish cooking in the pan later. Save about 1/4 cup of the water that was used to cook the pasta.',
   recipe_order: 1,
   recipe_id: 2
 })
 
 Step.create!({
-  description: 'Add olive oil to a pan and put the pan on medium heat. Add your garlic to the pan and allow them to brown slgihtly.',
+  description: 'Add olive oil to a pan and put the pan on a medium heat. Add the garlic to the pan and allow them to brown slowly.',
   recipe_order: 2,
   recipe_id: 2
 })
 
 Step.create!({
-  description: 'Once the garlic is golden brown, add your red pepper flakes and mix the garlic oil mixture well. Stir until slightly fragrant.',
+  description: 'Once the garlic is golden brown, add the red pepper flakes and mix the garlic oil mixture well. Stir until the mixture is fragrant with spice.',
   recipe_order: 3,
   recipe_id: 2
 })
 
 Step.create!({
-  description: 'When fragrant, add your boiled pasta to the pan along with your saved pasta water. Mix everything together well and let cook for a minute or two, depending on the texture of spaghetti you enjoy.',
+  description: 'When fragrant, add the boiled pasta to the pan along with the saved pasta water. Mix everything together well and let cook for about two minutes, depending on the texture of spaghetti you enjoy.',
   recipe_order: 4,
   recipe_id: 2
 })
 
 Step.create!({
-  description: 'When finished cooking, turn off the heat. Add your parsley to the pan and mix everything well. Transfer it all to a plate.',
+  description: 'When the pasta is finished cooking, turn off the heat. Add the parsley to the pan and mix everything well. Transfer it all to a plate.',
   recipe_order: 5,
   recipe_id: 2
 })
 
 Step.create!({
-  description: 'Top your pasta with your cheese. Mix well and serve.',
+  description: 'Top the pasta with the cheese. Mix well and serve.',
   recipe_order: 6,
   recipe_id: 2
 })
 
 # Recipe 3 steps
 Step.create!({
-  description: 'Use about 1 tbsp of sugar and mix your yeast in your water with the sugar.',
+  description: 'Use about 1 tbsp of sugar and mix the yeast in the water with the sugar.',
   recipe_order: 1,
   recipe_id: 3
 })
 
 Step.create!({
-  description: 'Using a stand mixer, add all your dry ingredients into the bowl. This would be your flour, remaining amount of sugar, and salt. Mix everything together for about 30 seconds.',
+  description: 'Using a stand mixer, add all the dry ingredients into the bowl. This would be the flour, remaining amount of sugar, and salt. Mix everything together for about 30 seconds.',
   recipe_order: 2,
   recipe_id: 3
 })
 
 Step.create!({
-  description: 'Add your butter, milk, eggs, vanilla extract, and yeast mixture into the bowl and mix until it forms a smooth dough.',
+  description: 'Add the butter, milk, eggs, vanilla extract, and yeast mixture into the bowl and mix until it forms a smooth dough.',
   recipe_order: 3,
   recipe_id: 3
 })
 
 Step.create!({
-  description: 'Cover and leave in a slightly warm place until the dough has doubled in size. This will take about an hour, but depends on your location.',
+  description: 'Cover and leave the dough in a slightly warm place until the dough has doubled in size. This will take about an hour, but depends on the location, humidity, and ambient temperature.',
   recipe_order: 4,
   recipe_id: 3
 })
 
 Step.create!({
-  description: 'Once doubled, bring a pot of oil to 350°F. Portion out your dough until each are about 12 oz"s each. Flatten the dough portions.',
+  description: "Once doubled, bring a pot of oil to 350°F. Portion out the dough until each are about 12 oz's each. Carefully flatten the dough portions into discs, and try not to knock all the air bubbles out that were formed during the rising process.",
   recipe_order: 5,
   recipe_id: 3
 })
 
 Step.create!({
-  description: 'Once your oil is up to temp, carefully add your dough discs in and fry until brown.',
+  description: 'Once the oil is up to temp, carefully add the dough discs into the oil and cook until the bottom side is brown. Once browned on one side, use a pair of tongs to flip the dough discs onto the other sides. Continue cooking util fully browned.',
   recipe_order: 6,
   recipe_id: 3
 })
 
 Step.create!({
-  description: 'When the desired color is reached, remove the malasadas from the oil and drain on paper towel. Sprinkle with sugar while they are hot. Let cool and enjoy.',
+  description: 'When the desired color is reached, remove the malasadas from the oil and allow them to cool on a paper towel. While they are fresh out of the oil, sprinkle the malasadas with the remainder of the sugar. Let them cool and enjoy.',
   recipe_order: 7,
   recipe_id: 3
 })
 
 # Recipe 4 steps
 Step.create!({
-  description: 'Prepare the leaves by draining the liquid from the can and removing the stems.',
+  description: 'Start by preparing the leaves by draining the liquid from the can and removing the stems from each individual leaf. Lay out the leaves flat and stack them on top of one another on a plate.',
   recipe_order: 1,
   recipe_id: 4
 })
 
 Step.create!({
-  description: 'Take your rice and wash it thoroughly. In a skillet, add some olive oil and your chopped onions. Cook the onions until they become slightly translucent.',
+  description: 'Take the rice and wash it thoroughly. In a skillet, add some olive oil and the chopped onions. Cook the onions until they become slightly translucent.',
   recipe_order: 2,
   recipe_id: 4
 })
 
 Step.create!({
-  description: 'Add your rice to the skillet and cook the rice slightly for about a minute. Once done, remove all of the contents and transfer to a bowl',
+  description: 'Add the rice to the skillet and cook the rice slightly for about a minute. Once done, remove all of the contents of the pan and transfer to a bowl',
   recipe_order: 3,
   recipe_id: 4
 })
 
 Step.create!({
-  description: 'To the bowl of rice and onions, add your mint, cilantro, and green onions. Mix this well and prepare to use this to stuff your grape leaves.',
+  description: 'To the bowl of rice and onions, add the mint, cilantro, and green onions. Mix this well and prepare to use this to stuff the grape leaves.',
   recipe_order: 4,
   recipe_id: 4
 })
 
 Step.create!({
-  description: 'With your filling ready, take a grape leaf and place it on a flat surface. Add about a tbsp of your filling to the stem part of the leaf. Roll the leaf and filling, tuck in the sides, and roll it all the way.',
+  description: 'With the filling ready, take a grape leaf and place it on a flat surface. Add about a tablespoon of the rice filling to the stem part of the leaf. Roll the leaf and filling, tucking in the sides as you roll it towards the tip of the leaf.',
   recipe_order: 5,
   recipe_id: 4
 })
 
 Step.create!({
-  description: 'Take your stuffed grape leaves and begin to layer them in a pot. Put the dolmades fold side down to prevent them from unfolding while cooking. Make sure they are packed tight next to one another, and layered on top of one another.',
+  description: 'Take the stuffed grape leaves and begin to layer them in a pot. Place the stuffed grape leaves fold side down to prevent them from unfolding while cooking. Make sure they are packed tight next to one another. Layer the dolamdes on top of one another if needed. ',
   recipe_order: 6,
   recipe_id: 4
 })
 
 Step.create!({
-  description: 'Add the lemon juice, salt, pepper, and the rest of your olive oil to the pot. Add enough water to barely cover the dolmades and bring the pot to a boil. Once boiling, simmer for 30 minutes.',
+  description: 'Add the lemon juice, salt, pepper, and the rest of the olive oil to the pot. Add enough water to barely cover the dolmades and bring the pot to a boil. Once boiling, simmer for 30 minutes.',
   recipe_order: 7,
   recipe_id: 4
 })
 
 Step.create!({
-  description: 'After 30 minutes, turn the heat off and let cool slightly. Once cooled, remove from the pot and serve cold or hot.',
+  description: 'After 30 minutes, turn the heat off and allow the pot to cool slightly. Once cooled, remove the dolmades from the pot and serve. These dolmades can be either served hot or cold.',
   recipe_order: 8,
   recipe_id: 4
 })
 
 # Recipe 5 steps
 Step.create!({
-  description: 'In a pan, heat your olive oil over medium heat. Add your leeks, celery, and onion. Add some salt and slowly cook these vegetables down for 6 minutes.',
+  description: 'In a pot, heat the olive oil over medium heat. Add the leeks, celery, and onion. Add some salt and slowly cook these vegetables down for about 6 minutes or until the onions become slighlty translucent.',
   recipe_order: 1,
   recipe_id: 5
 })
 
 Step.create!({
-  description: 'Add your water, chicken broth, and beets after the vegetables have cooked. Bring to a boil and let simmer for 30 minutes, or until the beets are fork tender.',
+  description: 'Add the water, chicken broth, and beets after the vegetables have been cooked. Bring the pot to a boil and let it simmer for 30 minutes, or until the beets are fork tender.',
   recipe_order: 2,
   recipe_id: 5
 })
 
 Step.create!({
-  description: 'Once the beets are tender, add your potatoes and carrots. Cook until both are tender as well.',
+  description: 'Once the beets are tender, add the potatoes and carrots. Cook until both the potatoes and carrots are tender as well.',
   recipe_order: 3,
   recipe_id: 5
 })
 
 Step.create!({
-  description: 'Add your tomatoes and cook for another 10 minutes. Once 10 minutes have passed, turn the heat off, add some of your dill and mix it in well. When serving, add more dill on top.',
+  description: 'Add the tomatoes and simmer for another 10 minutes. Once 10 minutes have passed, turn the stove off and mix in some of the dill. When serving, add more dill on top.',
   recipe_order: 4,
   recipe_id: 5
 })
@@ -835,7 +808,7 @@ Step.create!({
 })
 
 Step.create!({
-  description: 'Layer your tomatoes, mozzarella, and basil on top of one another in that order. Layer them in a way where you can begin a new layer on top of the last.',
+  description: 'Begin by layering your tomatoes, mozzarella, and basil onto a plate on top of one another in that order. Make sure to layer them across your plate.',
   recipe_order: 2,
   recipe_id: 6
 })
@@ -854,19 +827,19 @@ Step.create!({
 })
 
 Step.create!({
-  description: 'In a blender, add your whole tomatoes and diced bell peppers. Also add your parsley, thyme, onion, garlic, olive oil, and vegetable stock. Blend on high power until smooth.',
+  description: 'In a blender, add your whole tomatoes and diced bell peppers, parsley, thyme, onion, garlic, olive oil, and vegetable stock. Blend on high power until the resulting mixture is smooth.',
   recipe_order: 2,
   recipe_id: 7
 })
 
 Step.create!({
-  description: 'In a large baking dish, add the sauce you just made as a thin layer on the bottom. In an alternating pattern, layer your vegetables closely, one on top of the other and across the entire baking dish',
+  description: 'In a large baking dish, add the sauce you just made as a thin layer on the bottom. In an alternating pattern, layer your vegetables closely, one on top of the other and across the entirety of the baking dish',
   recipe_order: 3,
   recipe_id: 7
 })
 
 Step.create!({
-  description: 'Drizzle some olive oil over the arranged vegetables. Cut a piece of parchment paper to cover the vegetables and place it into the preheated oven for 1 hour.',
+  description: 'Drizzle some olive oil over the arranged vegetables. Cut a piece of parchment paper in the shape of your baking dish to cover the vegetables and place it into the preheated oven for 1 hour.',
   recipe_order: 4,
   recipe_id: 7
 })
@@ -885,13 +858,13 @@ Step.create!({
 })
 
 Step.create!({
-  description: 'After the potatoes are tender and golden brown, remove them from the skillet. Clean the skillet and put it back on the stove on medium high heat. Add your bacon to the skillet and cook it until it becomes crispy.',
+  description: 'After the potatoes are tender and golden brown, remove them from the skillet and set aside. Clean the skillet and bring it back onto the stove over medium high heat. Add your bacon to the skillet and cook it until the bacon becomes crispy.',
   recipe_order: 2,
   recipe_id: 8
 })
 
 Step.create!({
-  description: 'When crispy, remove the bacon and keep the bacon fat. Set the bacon aside on a paper towel. When cooled, chop the bacon into tiny pieces.',
+  description: 'When crispy, remove the bacon and keep the bacon grease. Set the bacon aside on a paper towel to drain. When cooled, chop the bacon up into tiny pieces.',
   recipe_order: 3,
   recipe_id: 8
 })
@@ -916,7 +889,7 @@ Step.create!({
 
 # Recipe 9 steps
 Step.create!({
-  description: 'In a bowl, mix the oyster sauce, soy sauce, sugar, and black pepper. Set aside for later',
+  description: 'In a bowl, mix the oyster sauce, soy sauce, sugar, and black pepper. Set aside for later use.',
   recipe_order: 1,
   recipe_id: 9
 })
@@ -928,13 +901,13 @@ Step.create!({
 })
 
 Step.create!({
-  description: 'Add your eggs and allow it to cook. Do not mix it too much. Once the edge of eggs have set and the middle is still runny, add your rice noodles.',
+  description: 'Add your eggs and allow it to cook. Try not to mix, cook, or agitate the eggs too much. Once the edge of egg mixture has set while the middle is still runny, add your rice noodles.',
   recipe_order: 3,
   recipe_id: 9
 })
 
 Step.create!({
-  description: 'Toss everything together, making sure that everything is evenly spread out. Once ready, add your sauce and mix well.',
+  description: 'Toss everything together, making sure that everything is evenly mixed. Once ready, add your sauce and mix well. Continue to cook for about a minute, or until the noodles are to the texture of your preference.',
   recipe_order: 4,
   recipe_id: 9
 })
@@ -959,19 +932,19 @@ Step.create!({
 })
 
 Step.create!({
-  description: 'Add your ice water and mix well, until a dough forms.',
+  description: 'Add your ice water to the food processor and mix well until a dough forms.',
   recipe_order: 3,
   recipe_id: 10
 })
 
 Step.create!({
-  description: 'Take your dough out of the food processor and shape it into a flat disc. Wrap the dough in plastic wrap and put it in a fridge to cool for 2 hours.',
+  description: 'Take your dough out of the food processor and shape it into a flat disc. Wrap the dough in plastic wrap and place it in a fridge to cool for 2 hours.',
   recipe_order: 4,
   recipe_id: 10
 })
 
 Step.create!({
-  description: 'While the dough is chilling, prepare the filling by mixing your chopped apples, nutmeg, allspice, and cinnamon.',
+  description: 'While the dough is chilling, prepare the filling by mixing your chopped apples, nutmeg, allspice, and cinnamon together.',
   recipe_order: 5,
   recipe_id: 10
 })
@@ -983,7 +956,7 @@ Step.create!({
 })
 
 Step.create!({
-  description: 'Take your dough and dust it with flour. Seperate the dough into two equal pieces.',
+  description: 'Take your dough out of the fridge and dust it liberally with flour. Seperate the dough into two equal pieces.',
   recipe_order: 7,
   recipe_id: 10
 })
@@ -1027,5 +1000,211 @@ Step.create!({
 # Reviews #######################################
 
 Review.create!({
-  
+  body: 'I loved this pho recipe!',
+  rating: 5,
+  recipe_id: 1,
+  user_id: 3,
+})
+
+Review.create!({
+  body: "It didn't end up serving 6. I didn't use enough bones, but still.",
+  rating: 2,
+  recipe_id: 1,
+  user_id: 3,
+})
+
+Review.create!({
+  body: 'It was okay...',
+  rating: 4,
+  recipe_id: 1,
+  user_id: 4,
+})
+
+Review.create!({
+  body: "If you love garlic like I love beets, you will thoroughly enjoy this plate of pasta.",
+  rating: 5,
+  recipe_id: 2,
+  user_id: 3,
+})
+
+Review.create!({
+  body: 'It was too spicy!',
+  rating: 1,
+  recipe_id: 2,
+  user_id: 6,
+})
+
+Review.create!({
+  body: 'Simple yet packed with flavor.',
+  rating: 5,
+  recipe_id: 2,
+  user_id: 4,
+})
+
+Review.create!({
+  body: "The smell alone brought back memories of a vacation in Hawaii.",
+  rating: 5,
+  recipe_id: 3,
+  user_id: 2,
+})
+
+Review.create!({
+  body: 'Needed a beet filling.',
+  rating: 3,
+  recipe_id: 3,
+  user_id: 3,
+})
+
+Review.create!({
+  body: 'Tasty, but needed an extra smoky flavor.',
+  rating: 4,
+  recipe_id: 3,
+  user_id: 6,
+})
+
+Review.create!({
+  body: 'Perfection',
+  rating: 5,
+  recipe_id: 4,
+  user_id: 5,
+})
+
+Review.create!({
+  body: 'Was a bit too strong in herbs',
+  rating: 3,
+  recipe_id: 4,
+  user_id: 2,
+})
+
+Review.create!({
+  body: 'Tasty! They were delicious cold as well!',
+  rating: 4,
+  recipe_id: 4,
+  user_id: 5,
+})
+
+Review.create!({
+  body: 'Tasted okay',
+  rating: 3,
+  recipe_id: 5,
+  user_id: 4,
+})
+
+Review.create!({
+  body: 'Stained my fingers...',
+  rating: 2,
+  recipe_id: 5,
+  user_id: 2,
+})
+
+Review.create!({
+  body: 'Absolutely delicious',
+  rating: 5,
+  recipe_id: 5,
+  user_id: 6,
+})
+
+Review.create!({
+  body: 'Simple, yet each ingredient was not overpowered by another. Perfection.',
+  rating: 5,
+  recipe_id: 6,
+  user_id: 4,
+})
+
+Review.create!({
+  body: 'Needed more beets',
+  rating: 4,
+  recipe_id: 6,
+  user_id: 3,
+})
+
+Review.create!({
+  body: 'Delicious and easy to make',
+  rating: 5,
+  recipe_id: 6,
+  user_id: 2,
+})
+
+Review.create!({
+  body: "Made this for a party, everyone couldn't stop eating it",
+  rating: 5,
+  recipe_id: 7,
+  user_id: 2,
+})
+
+Review.create!({
+  body: "Take the time to arrange your vegetables carefully. This dish won't disappoint",
+  rating: 5,
+  recipe_id: 7,
+  user_id: 5,
+})
+
+Review.create!({
+  body: 'Even without my favorite vegetable, this was divine.',
+  rating: 5,
+  recipe_id: 7,
+  user_id: 3,
+})
+
+Review.create!({
+  body: 'Tasty. Easy. Simple.',
+  rating: 4,
+  recipe_id: 8,
+  user_id: 3,
+})
+
+Review.create!({
+  body: 'With the properly grown ingredients, this was amazing.',
+  rating: 5,
+  recipe_id: 8,
+  user_id: 5,
+})
+
+Review.create!({
+  body: "Could've used more herbs and flavorings. Slightly lacking.",
+  rating: 2,
+  recipe_id: 8,
+  user_id: 4,
+})
+
+Review.create!({
+  body: "Need some more sour notes to it",
+  rating: 2,
+  recipe_id: 9,
+  user_id: 5,
+})
+
+Review.create!({
+  body: "A wok gave a great smoky flavor, but the dish itself was slightly bland.",
+  rating: 4,
+  recipe_id: 9,
+  user_id: 6,
+})
+
+Review.create!({
+  body: 'Sweet, savory, simple. Delicious.',
+  rating: 4,
+  recipe_id: 9,
+  user_id: 2,
+})
+
+Review.create!({
+  body: 'An American classic',
+  rating: 5,
+  recipe_id: 10,
+  user_id: 2,
+})
+
+Review.create!({
+  body: 'Using fresh apples made this sweet yet slightly sour, but incredibly delicious!',
+  rating: 4,
+  recipe_id: 10,
+  user_id: 5,
+})
+
+Review.create!({
+  body: 'Made this in a cast iron skillet, came out great!',
+  rating: 4,
+  recipe_id: 10,
+  user_id: 6,
 })

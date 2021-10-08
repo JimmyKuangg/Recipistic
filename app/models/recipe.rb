@@ -1,6 +1,5 @@
 class Recipe < ApplicationRecord
   validates :title, :body, :servings, :user_id, presence: true
-  validates :public, inclusion: { in: [true, false] }
   
   has_one_attached :photo
   
