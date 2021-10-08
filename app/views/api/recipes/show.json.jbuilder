@@ -39,7 +39,7 @@ json.reviews do
   end
 end
 
-if !current_user.favorites.empty?
+if current_user && !current_user.favorites.empty? 
   json.user_favorites do 
     current_user.favorites.each do |favorite|
       json.set! favorite.id do

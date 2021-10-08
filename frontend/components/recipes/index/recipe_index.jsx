@@ -56,7 +56,7 @@ class RecipeIndex extends React.Component {
     if (this.props.recipes.length === 0){
       return null;
     }
-    console.log(this.filterRecipes());
+  
     return (
       <div id="recipe-index">
         <SearchBar 
