@@ -1003,7 +1003,7 @@ Review.create!({
   body: 'I loved this pho recipe!',
   rating: 5,
   recipe_id: 1,
-  user_id: 3,
+  user_id: 2,
 })
 
 Review.create!({
@@ -1080,7 +1080,7 @@ Review.create!({
   body: 'Tasty! They were delicious cold as well!',
   rating: 4,
   recipe_id: 4,
-  user_id: 5,
+  user_id: 3,
 })
 
 Review.create!({
@@ -1150,7 +1150,7 @@ Review.create!({
   body: 'Tasty. Easy. Simple.',
   rating: 4,
   recipe_id: 8,
-  user_id: 3,
+  user_id: 6,
 })
 
 Review.create!({
