@@ -35,18 +35,10 @@
   height: 100%;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   color: black;
   text-decoration: none;
   background-color: white;
-}
-
-.favorite-item-photo {
-  display: flex;
-  align-items: center;
-  i {
-    font-size: 50px;
-    align-items: center;
-  }
 }
 
 .favorite-item-details {
@@ -54,6 +46,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   width: 50%;
+  height: 100%;
 
   h2 {
     padding-top: 30px;

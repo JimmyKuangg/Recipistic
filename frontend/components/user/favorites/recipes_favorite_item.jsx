@@ -5,9 +5,7 @@ export default function RecipesFavoriteItem(props) {
   return (
     <li>
       <Link to={`/recipes/${props.id}`} id="favorite-showcase">
-        <div className="favorite-item-photo">
-          <i className="fas fa-hamburger"></i>
-        </div>
+        <img id="favorite-thumbnail" src={props.photoUrl}/>
         <div className="favorite-item-details">
           <h2>{props.title}</h2>
           <p>______________</p>

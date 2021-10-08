@@ -58,7 +58,7 @@ recipe_1 = Recipe.create!({
   servings: 6,
   user_id: 2
 })  
-recipe_1_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/pho.jpg)
+recipe_1_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/pho.jpg')
 recipe_1.photo.attach(io: recipe_1_photo, filename: 'pho.jpg')
 
 recipe_2 = Recipe.create!({
@@ -67,7 +67,7 @@ recipe_2 = Recipe.create!({
   servings: 4,
   user_id: 2
 })  
-recipe_2_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/aglio.jpg)
+recipe_2_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/aglio.jpg')
 recipe_2.photo.attach(io: recipe_2_photo, filename: 'aglio.jpg')
 
 recipe_3 = Recipe.create!({
@@ -76,7 +76,7 @@ recipe_3 = Recipe.create!({
   servings: 4,
   user_id: 1
 })  
-recipe_3_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/malasadas.jpg)
+recipe_3_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/malasadas.jpg')
 recipe_3.photo.attach(io: recipe_3_photo, filename: 'malasadas.jpg')
 
 recipe_4 = Recipe.create!({
@@ -85,7 +85,7 @@ recipe_4 = Recipe.create!({
   servings: 6,
   user_id: 4
 })  
-recipe_4_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/dolmades.jpg)
+recipe_4_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/dolmades.jpg')
 recipe_4.photo.attach(io: recipe_4_photo, filename: 'dolmades.jpg')
 
 recipe_5 = Recipe.create!({
@@ -94,7 +94,7 @@ recipe_5 = Recipe.create!({
   servings: 6,
   user_id: 3
 })  
-recipe_5_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/borscht.jpg)
+recipe_5_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/borscht.jpg')
 recipe_5.photo.attach(io: recipe_5_photo, filename: 'borscht.jpg')
 
 recipe_6 = Recipe.create!({
@@ -103,7 +103,7 @@ recipe_6 = Recipe.create!({
   servings: 1,
   user_id: 5
 })  
-recipe_6_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/caprese.jpg)
+recipe_6_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/caprese.jpg')
 recipe_6.photo.attach(io: recipe_6_photo, filename: 'caprese.jpg')
 
 recipe_7 = Recipe.create!({
@@ -112,7 +112,7 @@ recipe_7 = Recipe.create!({
   servings: 8,
   user_id: 4
 })  
-recipe_7_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/ratatouille.jpg)
+recipe_7_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/ratatouille.jpg')
 recipe_7.photo.attach(io: recipe_7_photo, filename: 'ratatouille.jpg')
 
 recipe_8 = Recipe.create!({
@@ -121,7 +121,7 @@ recipe_8 = Recipe.create!({
   servings: 4,
   user_id: 6
 })  
-recipe_8_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/potato_hash.jpeg)
+recipe_8_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/potato_hash.jpeg')
 recipe_8.photo.attach(io: recipe_8_photo, filename: 'potato_hash.jpeg')
 
 recipe_9 = Recipe.create!({
@@ -130,8 +130,8 @@ recipe_9 = Recipe.create!({
   servings: 4,
   user_id: 2
 })
-recipe_9_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/pad_see_ew.jpg)
-recipe_9.photo.attach(io: recipe_8_photo, filename: 'pad_see_ew.jpg')
+recipe_9_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/pad_see_ew.jpg')
+recipe_9.photo.attach(io: recipe_9_photo, filename: 'pad_see_ew.jpg')
   
 recipe_10 = Recipe.create!({
   title: 'Apple Pie',
@@ -139,8 +139,8 @@ recipe_10 = Recipe.create!({
   servings: 8,
   user_id: 6
 })
-recipe_10_photo = open(https://recipistic-seeds.s3.us-west-1.amazonaws.com/apple_pie.jpg)
-recipe_10.photo.attach(io: recipe_8_photo, filename: 'apple_pie.jpg')
+recipe_10_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/apple_pie.jpg')
+recipe_10.photo.attach(io: recipe_10_photo, filename: 'apple_pie.jpg')
     
 # Ingredients ###################################
 # Recipe 1 ingredients 
@@ -567,7 +567,8 @@ Ingredient.create!({
 })
 
 Ingredient.create!({
-  description: '1/2 cup of chinese broccoli, halved vertically and cut into logs'
+  description: '1/2 cup of chinese broccoli, halved vertically and cut into logs',
+  recipe_id: 9
 })
 
 Ingredient.create!({

@@ -4,6 +4,7 @@ json.recipes do
   @user.recipes.each.with_index do |recipe, idx|
     json.set! recipe.id do 
       json.extract! recipe, :id, :title, :body, :servings
+      json.photoUrl url_for(recipe.photo)
 
       reviews = recipe.reviews
       json.numReviews reviews.length

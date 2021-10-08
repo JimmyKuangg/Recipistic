@@ -1,7 +1,8 @@
 @recipes.each do |recipe|
   json.set! recipe.id do
     json.extract! recipe, :id, :title
-    
+    json.photoUrl url_for(recipe.photo)
+
     reviews = recipe.reviews
     json.numReviews reviews.length
     if reviews.length != 0

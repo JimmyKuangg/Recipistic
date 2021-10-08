@@ -16,6 +16,7 @@ export default class UserFavorites extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="favorites-page">
         <div className="favorites-container">
@@ -27,6 +28,7 @@ export default class UserFavorites extends React.Component {
                   id={favorite.id}
                   title={favorite.title}
                   author={favorite.author}
+                  photoUrl={favorite.photoUrl}
                   key={i} 
                 />
               ))}

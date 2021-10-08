@@ -1,5 +1,5 @@
 json.extract! @recipe, :id, :title, :body, :servings, :user_id
-# json.photoUrl url_for(@recipe.photo);
+json.photoUrl url_for(@recipe.photo);
 
 #Average rating
 if @recipe.reviews.length != 0

@@ -43,7 +43,7 @@ export default class RecipesShow extends React.Component {
               <RatingStars average={this.props.recipe.average}/>
             </div>
           </div>
-          <h2><i className="fas fa-hamburger"></i></h2> 
+          <img id="recipe-image" src={this.props.recipe.photoUrl}/>
         </div>
         <div id="recipe-container">
           <div id="recipe-body">
