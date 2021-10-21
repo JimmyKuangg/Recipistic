@@ -1,6 +1,7 @@
 # Recipistic 
 
 Recipistic is a a full-stack web aplication designed to be a clone of Epicurious. Users can search for recipes that are currently up on the website and each recipe has their own show pages where users can read through them and leave a comment or favorite that recipe if they are logged in. 
+![Screen Shot 2021-10-20 at 3 32 14 PM](https://user-images.githubusercontent.com/66882632/138208375-ce304196-372e-4d98-825d-3397102d7356.png)
 
 View it here: [Recipistic](https://recipistic.herokuapp.com/#/)
 
