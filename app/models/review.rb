@@ -4,8 +4,8 @@ class Review < ApplicationRecord
   validate :correct_rating
 
   def correct_rating 
-    if (rating && !rating.between?(1, 5))
-      render json: ["Please make your rating between 1 and 5"]
+    if (!rating || !rating.between?(1, 5))
+      errors[:rating] << 'should be between 1 and 5'
     end
   end
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default class CreateReviewForm extends React.Component {
   constructor(props) {
@@ -8,39 +8,38 @@ export default class CreateReviewForm extends React.Component {
   }
 
   handleChange(field) {
-    return (e) => this.setState({[field]: e.target.value})
+    return (e) => this.setState({ [field]: e.target.value });
   }
-  
+
   handleSubmit(e) {
     e.preventDefault();
-    this.props.newReview(this.state)
-    .then(() => this.props.closeModal());
+    this.props.newReview(this.state).then(() => this.props.closeModal());
   }
 
   handleClick(star) {
-    return(e) => {
-      switch(star){
+    return (e) => {
+      switch (star) {
         case 'star1':
-          this.setState({rating: 1});
+          this.setState({ rating: 1 });
           break;
         case 'star2':
-         this.setState({rating: 2});
-         break;
+          this.setState({ rating: 2 });
+          break;
         case 'star3':
-          this.setState({rating: 3});
+          this.setState({ rating: 3 });
           break;
         case 'star4':
-          this.setState({rating: 4});
+          this.setState({ rating: 4 });
           break;
         case 'star5':
-          this.setState({rating: 5});
+          this.setState({ rating: 5 });
           break;
         default:
-          this.setState({rating: 0});
+          this.setState({ rating: 0 });
       }
-    }
+    };
   }
-  
+
   render() {
     return (
       <div className="modal-text">
@@ -53,25 +52,77 @@ export default class CreateReviewForm extends React.Component {
             onChange={this.handleChange('body').bind(this)}
           />
           <div className="rating-form">
-            <label>{this.state.rating < 1 ? <i className="far fa-star"></i> : <i className="fas fa-star"></i>}
-              <input type="radio" value="one-star" onClick={this.handleClick('star1')}/>
+            <label>
+              {this.state.rating < 1 ? (
+                <i className="far fa-star"></i>
+              ) : (
+                <i className="fas fa-star"></i>
+              )}
+              <input
+                type="radio"
+                value="one-star"
+                onClick={this.handleClick('star1')}
+              />
             </label>
-            <label>{this.state.rating < 2 ? <i className="far fa-star"></i> : <i className="fas fa-star"></i>}
-              <input type="radio" value="two-stars" onClick={this.handleClick('star2')}/>
+            <label>
+              {this.state.rating < 2 ? (
+                <i className="far fa-star"></i>
+              ) : (
+                <i className="fas fa-star"></i>
+              )}
+              <input
+                type="radio"
+                value="two-stars"
+                onClick={this.handleClick('star2')}
+              />
             </label>
-            <label>{this.state.rating < 3 ? <i className="far fa-star"></i> : <i className="fas fa-star"></i>}
-              <input type="radio" value="three-stars" onClick={this.handleClick('star3')}/>
+            <label>
+              {this.state.rating < 3 ? (
+                <i className="far fa-star"></i>
+              ) : (
+                <i className="fas fa-star"></i>
+              )}
+              <input
+                type="radio"
+                value="three-stars"
+                onClick={this.handleClick('star3')}
+              />
             </label>
-            <label>{this.state.rating < 4 ? <i className="far fa-star"></i> : <i className="fas fa-star"></i>}
-              <input type="radio" value="four-stars" onClick={this.handleClick('star4')}/>
+            <label>
+              {this.state.rating < 4 ? (
+                <i className="far fa-star"></i>
+              ) : (
+                <i className="fas fa-star"></i>
+              )}
+              <input
+                type="radio"
+                value="four-stars"
+                onClick={this.handleClick('star4')}
+              />
             </label>
-            <label>{this.state.rating < 5 ? <i className="far fa-star"></i> : <i className="fas fa-star"></i>}
-              <input type="radio" value="five-stars" onClick={this.handleClick('star5')}/>
+            <label>
+              {this.state.rating < 5 ? (
+                <i className="far fa-star"></i>
+              ) : (
+                <i className="fas fa-star"></i>
+              )}
+              <input
+                type="radio"
+                value="five-stars"
+                onClick={this.handleClick('star5')}
+              />
             </label>
           </div>
+          <ul id="review-error-container">
+            {this.props.errors.map((error, i) => (
+              <li className="review-error" key={i}>
+                {error}
+              </li>
+            ))}
+          </ul>
           <button type="submit">Post Review</button>
         </form>
       </div>
-    )
+    );
   }
 }

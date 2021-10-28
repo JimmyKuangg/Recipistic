@@ -2,10 +2,10 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
 
-    if @review.save!
+    if @review.save
       render :show
     else
-      render json: @review.errors.full_messages
+      render json: @review.errors.full_messages, status: 401
     end
   end
 
@@ -14,7 +14,7 @@ class Api::ReviewsController < ApplicationController
     if @review && @review.update(review_params)
       render :show
     else  
-      render json: ["Error in update review!"]
+      render json: @review.errors.full_messages, status: 401
     end
   end
 

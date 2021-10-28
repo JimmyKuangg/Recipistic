@@ -25,7 +25,7 @@
     font-size: 16px;
     margin-top: 20px;
   }
-  
+
   a {
     text-decoration: none;
     color: black;
@@ -121,7 +121,7 @@
 #edit-and-delete {
   display: flex;
 
-  button{
+  button {
     background: none;
     border: none;
     margin: 5px;
@@ -151,7 +151,7 @@
   label {
     transition: color 0.25s;
   }
-  
+
   label:hover {
     color: red;
   }
@@ -183,7 +183,7 @@
   }
 }
 
-.review-button{
+.review-button {
   background: none;
   border: none;
   transition: color 0.25s;
@@ -192,7 +192,7 @@
 }
 
 .review-button:hover {
-    color: red;
+  color: red;
 }
 
 #filled-heart {
@@ -212,6 +212,12 @@
 
 #recipe-thumbnail {
   object-fit: cover;
-  width:100%;
+  width: 100%;
   height: 250px;
+}
+
+.review-error {
+  list-style: none;
+  color: red;
+  font-size: 15px;
 }
