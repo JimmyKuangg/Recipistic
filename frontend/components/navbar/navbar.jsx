@@ -22,7 +22,10 @@ export default class Navbar extends React.Component {
             <span className="material-icons">menu</span>
           </button>
           <button onClick={this.openFavorites}>
-            <span className="material-icons">favorite</span>
+            <div className="favorite-button">
+              <span className="material-icons">favorite</span>
+              Favorites
+            </div>
           </button>
           <button onClick={() => this.props.openModal('signup')}>
             Sign Up
@@ -37,7 +40,10 @@ export default class Navbar extends React.Component {
             <span className="material-icons">menu</span>
           </button>
           <button onClick={this.openFavorites}>
-            <span className="material-icons">favorite</span>
+            <div className="favorite-button">
+              <span className="material-icons">favorite</span>
+              Favorites
+            </div>
           </button>
         </div>
       );
