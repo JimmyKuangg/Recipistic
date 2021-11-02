@@ -14,7 +14,7 @@ export default class Sidemenu extends React.Component {
 
   render() {
     return (
-      <div id={this.props.sidemenu ? 'sidemenu' : 'sidemenu-hidden'}>
+      <div id="sidemenu" className={this.props.sidemenu ? 'open' : 'closed'}>
         <button id="close-sidemenu" onClick={this.props.closeSidemenu}>
           X
         </button>
