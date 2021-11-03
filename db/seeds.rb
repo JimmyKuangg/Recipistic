@@ -51,6 +51,27 @@ user_6 = User.create!({
   bio: "Nothing tastes better than when its cooked outside in the wilderness."
 })  
 
+user_7 = User.create!({
+  username: 'IMakeJam',
+  email: 'pugtoofat@io.com',
+  password: 'puggywuggy',
+  bio: "Come try some of my jams!"
+})
+
+user_8 = User.create!({
+  username: 'Orcam',
+  email: 'macroking@gains.com',
+  password: 'alwaysbreakpr',
+  bio: 'Protein packed meals are the only way to go.',
+})
+
+user_9 = User.create!({
+  username: 'ColmakIsKing',
+  email: 'colmakdh@keyboards.com',
+  password: 'ilovevern',
+  bio: 'Can reach 102 wpm with colmak layout.'
+})
+
 # Recipes #######################################
 recipe_1 = Recipe.create!({
   title: 'Beef Pho',
@@ -142,6 +163,95 @@ recipe_10 = Recipe.create!({
 recipe_10_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/apple_pie.jpg')
 recipe_10.photo.attach(io: recipe_10_photo, filename: 'apple_pie.jpg')
     
+recipe_11 = Recipe.create!({
+  title: 'Tiramisu',
+  body: 'A light and creamy cake of chocolate, espresso, and mascarpone cheese.',
+  servings: 6,
+  user_id: 1
+})
+recipe_11_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/tiramisu.jpg')
+recipe_11.photo.attach(io: recipe_11_photo, filename: 'tiramisu.jpg')
+
+recipe_12 = Recipe.create!({
+  title: 'Chocolate Chip Cookies',
+  body: 'A warm cookie with a soft gooey interior that will entice you to bake more.',
+  servings: 4,
+  user_id: 1
+})
+recipe_12_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/cookies.jpg')
+recipe_12.photo.attach(io: recipe_12_photo, filename: 'cookies.jpg')
+
+recipe_13 = Recipe.create!({
+  title: 'Apricot Jam',
+  body: 'A simple to make jam that will go great on any slice of bread.',
+  servings: 4,
+  user_id: 7
+})
+recipe_13_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/apricot_jam.jpg') 
+recipe_13.photo.attach(io: recipe_13_photo, filename: 'apricot_jam.jpg')
+
+recipe_14 = Recipe.create!({
+  title: 'Beet Salad',
+  body: 'Colorful and delicious, this beet salad will be a beautiful and light lunch for anyone.',
+  servings: 3,
+  user_id: 3
+})
+recipe_14_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/beet_salad.jpg')
+recipe_14.photo.attach(io: recipe_14_photo, filename: 'beet_salad.jpg')
+
+recipe_15 = Recipe.create!({
+  title: 'Crispy Fried Chicken',
+  body: 'Crispy and crunchy fried chicken, just like mom made.',
+  servings: 6,
+  user_id: 8
+})
+recipe_15_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/fried_chicken.jpg')
+recipe_15.photo.attach(io: recipe_15_photo, filename: 'fried_chicken.jpg')
+
+recipe_16 = Recipe.create!({
+  title: 'Shrimp Spring Rolls',
+  body: 'Rice paper rolls packed with shrimp, fresh herbs, rice noodles and more, these springy and light rolls are an amazing appetizer or meal.',
+  servings: 5,
+  user_id: 1
+})
+recipe_16_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/spring_rolls.jpg')
+recipe_16.photo.attach(io: recipe_16_photo, filename: 'spring_rolls.jpg')
+
+recipe_17 = Recipe.create!({
+  title: 'Homemade Wontons',
+  body: 'Light, pillowy, balls of meat packed with shrimp, mushrooms, and more all wrapped in a thin dough',
+  servings: 4,
+  user_id: 9
+})
+recipe_17_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/wontons.jpg')
+recipe_17.photo.attach(io: recipe_17_photo, filename: 'wontons.jpg')
+
+recipe_18 = Recipe.create!({
+  title: 'Snickerdoodles',
+  body: "Though cooked indoors, these small and fluffy cookies coated with cinnamon sugar are sure to make you glad you're indoors for once.",
+  servings: 6,
+  user_id: 6
+})
+recipe_18_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/snickerdoodles.jpg') 
+recipe_18.photo.attach(io: recipe_18_photo, filename: 'snickerdoodles.jpg')
+
+recipe_19 = Recipe.create!({
+  title: 'Perfect Prime Rib',
+  body: 'A beautifully cooked prime rib that will be the centerpiece of any holiday dinner.',
+  servings: 10,
+  user_id: 2
+})
+recipe_19_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/prime_rib.jpg') 
+recipe_19.photo.attach(io: recipe_19_photo, filename: 'prime_rib.jpg')
+
+recipe_20 = Recipe.create!({
+  title: 'Homemade Ramen Noodles',
+  body: 'Fresh noodles made at home that taste better than any instant package you may buy.',
+  servings: 4,
+  user_id: 1
+})
+recipe_20_photo = open('https://recipistic-seeds.s3.us-west-1.amazonaws.com/homemade_ramen.jpg')
+recipe_20.photo.attach(io: recipe_20_photo, filename: 'homemade_ramen.jpg')
 # Ingredients ###################################
 # Recipe 1 ingredients 
 Ingredient.create!({
@@ -642,6 +752,381 @@ Ingredient.create!({
   recipe_id: 10
 })
 
+# Recipe 11 Ingredients
+Ingredient.create!({
+  description: '4 large egg yolks',
+  recipe_id: 11
+})
+
+Ingredient.create!({
+  description: '1/2 cup sugar',
+  recipe_id: 11
+})
+
+Ingredient.create!({
+  description: '3/4 cup heavy cream',
+  recipe_id: 11
+})
+
+Ingredient.create!({
+  description: '1 cup marscapone cheese',
+  recipe_id: 11
+})
+
+Ingredient.create!({
+  description: '1 1/2 cup espresso',
+  recipe_id: 11
+})
+
+Ingredient.create!({
+  description: '2 tablespoons cocoa powder',
+  recipe_id: 11
+})
+
+Ingredient.create!({
+  description: '1 package lady fingers',
+  recipe_id: 11
+})
+
+#Recipe 12 Ingredients
+Ingredient.create!({
+  description: '3 cups all purpose flour',
+  recipe_id: 12
+})
+
+Ingredient.create!({
+  description: '1 cup butter, softened',
+  recipe_id: 12
+})
+
+Ingredient.create!({
+  description: '1 cup white sugar',
+  recipe_id: 12
+})
+
+Ingredient.create!({
+  description: '2 eggs',
+  recipe_id: 12
+})
+
+Ingredient.create!({
+  description: '2 teaspoons vanilla extract',
+  recipe_id: 12
+})
+
+Ingredient.create!({
+  description: '1 cup brown sugar',
+  recipe_id: 12
+})
+
+Ingredient.create!({
+  description: '2 cups semisweet chocolate chips',
+  recipe_id: 12
+})
+
+#Recipe 13 Ingredients 
+Ingredient.create!({
+  description: '6 large apricots, peeled and pitted',
+  recipe_id: 13
+})
+
+Ingredient.create!({
+  description: '3 cups white sugar',
+  recipe_id: 13
+})
+
+#Recipe 14 Ingredients
+Ingredient.create!({
+  description: '1 medium beet, peeled and cubed',
+  recipe_id: 14
+})
+
+Ingredient.create!({
+  description: '1/3 cup slivered almonds',
+  recipe_id: 14
+})
+
+Ingredient.create!({
+  description: '1 cup baby spinach',
+  recipe_id: 14
+})
+
+Ingredient.create!({
+  description: '1 cup arugula',
+  recipe_id: 14
+})
+
+Ingredient.create!({
+  description: '2 tablespoons apple cider vinegar',
+  recipe_id: 14
+})
+
+Ingredient.create!({
+  description: '1 tablespoon lime juice',
+  recipe_id: 14
+})
+
+Ingredient.create!({
+  description: '2 tablespoons olive oil',
+  recipe_id: 14
+})
+
+Ingredient.create!({
+  description: '1 tablespoon honey',
+  recipe_id: 14
+})
+
+Ingredient.create!({
+  description: '1/2 teaspoon salt',
+  recipe_id: 14
+})
+
+Ingredient.create!({
+  description: '1/2 teaspoon ground black pepper',
+  recipe_id: 14
+})
+
+#Recipe 15 Ingredients 
+Ingredient.create!({
+  description: '6 chicken thighs',
+  recipe_id: 15
+})
+
+Ingredient.create!({
+  description: '6 chicken drumsticks',
+  recipe_id: 15
+})
+
+Ingredient.create!({
+  description: '3 cups buttermilk',
+  recipe_id: 15
+})
+
+Ingredient.create!({
+  description: '2 teaspoons salt',
+  recipe_id: 15
+})
+
+Ingredient.create!({
+  description: '1 teaspoon ground black pepper',
+  recipe_id: 15
+})
+
+Ingredient.create!({
+  description: '3 cups all purpose flour',
+  recipe_id: 15
+})
+
+Ingredient.create!({
+  description: '1/2 cup cornstarch',
+  recipe_id: 15
+})
+
+Ingredient.create!({
+  description: '2 teaspoons onion powder',
+  recipe_id: 15
+})
+
+Ingredient.create!({
+  description: '2 teaspoons garlic powder',
+  recipe_id: 15
+})
+
+Ingredient.create!({
+  description: '1 teaspoon dried oregano',
+  recipe_id: 15
+})
+
+Ingredient.create!({
+  description: '1 teaspoon cayenne pepper',
+  recipe_id: 15
+})
+
+Ingredient.create!({
+  description: 'Enough oil to deep fry',
+  recipe_id: 15
+})
+
+#Recipe 16 Ingredients
+Ingredient.create!({
+  description: '5 ounces dried rice noodles',
+  recipe_id: 16
+})
+
+Ingredient.create!({
+  description: '10 jumbo shrimp',
+  recipe_id: 16
+})
+
+Ingredient.create!({
+  description: '10 round rice papper wrappers',
+  recipe_id: 16
+})
+
+Ingredient.create!({
+  description: '10 lettuce leaves',
+  recipe_id: 16
+})
+
+Ingredient.create!({
+  description: '1 cup bean sprouts',
+  recipe_id: 16
+})
+
+Ingredient.create!({
+  description: '1/2 cup mint leaves',
+  recipe_id: 16
+})
+
+Ingredient.create!({
+  description: '1/2 cup cilantro leaves',
+  recipe_id: 16
+})
+
+# Recipe 17 Ingredients
+Ingredient.create!({
+  description: '1 pound ground pork',
+  recipe_id: 17
+})
+
+Ingredient.create!({
+  description: '1 cup wood ear mushrooms, rehydrated',
+  recipe_id: 17
+})
+
+Ingredient.create!({
+  description: '1 cup green onions, minced',
+  recipe_id: 17
+})
+
+Ingredient.create!({
+  description: '1 cup cilantro, minced',
+  recipe_id: 17
+})
+
+Ingredient.create!({
+  description: '2 cups shrimp, diced',
+  recipe_id: 17
+})
+
+Ingredient.create!({
+  description: '1/2 cup soy sauce',
+  recipe_id: 17
+})
+
+Ingredient.create!({
+  description: '1/2 cup oyster sauce',
+  recipe_id: 17
+})
+
+Ingredient.create!({
+  description: '1/2 tablespoon salt',
+  recipe_id: 17
+})
+
+Ingredient.create!({
+  description: '1/2 tablespoon black pepper',
+  recipe_id: 17
+})
+
+Ingredient.create!({
+  description: '1/2 tablespoon white pepper',
+  recipe_id: 17
+})
+
+Ingredient.create!({
+  description: '1 pack of premade wonton wrappers',
+  recipe_id: 17
+})
+
+# Recipe 18 Ingredients
+Ingredient.create!({
+  description: '2 cups sugar',
+  recipe_id: 18
+})
+
+Ingredient.create!({
+  description: '1 cup butter, softened',
+  recipe_id: 18
+})
+
+Ingredient.create!({
+  description: '2 large eggs',
+  recipe_id: 18
+})
+
+Ingredient.create!({
+  description: '2 teaspoons vanilla extract',
+  recipe_id: 18
+})
+
+Ingredient.create!({
+  description: '3 cups all purpose flour',
+  recipe_id: 18
+})
+
+Ingredient.create!({
+  description: '1 teaspoon cream of tartar',
+  recipe_id: 18
+})
+
+Ingredient.create!({
+  description: '1/2 teaspoon baking soda',
+  recipe_id: 18
+})
+
+Ingredient.create!({
+  description: '1 teaspoon salt',
+  recipe_id: 18
+})
+
+Ingredient.create!({
+  description: '1 1/2 tablespoons cinnamon',
+  recipe_id: 18
+})
+
+# Recipe 19 Ingredients
+Ingredient.create!({
+  description: '1 5 pound prime rib roast',
+  recipe_id: 19
+})
+
+Ingredient.create!({
+  description: '2 tablespoons salt',
+  recipe_id: 19
+})
+
+Ingredient.create!({
+  description: '2 tablespoons black pepper',
+  recipe_id: 19
+})
+
+Ingredient.create!({
+  description: '1 bunch fresh rosemary',
+  recipe_id: 19
+})
+
+# Recipe 20 Ingredients
+Ingredient.create!({
+  description: '3 cups all purpose flour',
+  recipe_id: 20
+})
+
+Ingredient.create!({
+  description: '2 tablespoons kansui OR 1 tablespoon of baked baking soda',
+  recipe_id: 20
+})
+
+Ingredient.create!({
+  description: '1 cup water',
+  recipe_id: 20
+})
+
+Ingredient.create!({
+  description: '1 tablespoon salt',
+  recipe_id: 20
+})
+
 # Steps #########################################
 # Recipe 1 steps
 Step.create!({
@@ -1049,6 +1534,352 @@ Step.create!({
   recipe_id: 10
 })
 
+# Recipe 11 Steps
+Step.create!({
+  description: 'Using an electric mixer, whip the egg yolks and half of the sugar together until they form ribbons when lifted off the bowl. Transfer this mexture to a large bowl.',
+  recipe_order: 1,
+  recipe_id: 11
+})
+
+Step.create!({
+  description: 'In the electric mixer with a clean bowl, whip the cream and remaining sugar together until it forms soft peaks. Once formed, add the mascarpone and whip until it creates peaks once more. Once complete, fold this mixture into the egg mixture created from before.',
+  recipe_order: 2,
+  recipe_id: 11
+})
+
+Step.create!({
+  description: 'Use a sifter and dust the bottom of a baking dish with the cocoa powder',
+  recipe_order: 3,
+  recipe_id: 11
+})
+
+Step.create!({
+  description: 'Pour your espresso into a shallow bowl. Quickly dip your ladyfingers into the espresso and place them into one layer onto the baking dish. Make sure to fill as much space as possible.',
+  recipe_order: 4,
+  recipe_id: 11
+})
+
+Step.create!({
+  description: 'Spread half of your mascarpone mixture on top of the lady fingers and spread evenly. Repeat this layering process as many times as needed in order to use all of the mascarpone and ladyfingers.',
+  recipe_order: 5,
+  recipe_id: 11
+})
+
+Step.create!({
+  description: 'Dust the final layer with the remainder of your cocoa powder and wrap with plastic wrap. Place into the fridge and allow it to chill for at least 4 hours (the longer the better) before serving.',
+  recipe_order: 6,
+  recipe_id: 11
+})
+
+# Recipe 12 Steps
+Step.create!({
+  description: 'Preheat oven to 350°F',
+  recipe_order: 1,
+  recipe_id: 12
+})
+
+Step.create!({
+  description: 'Cream your butter with the white and brown sugar until smooth.',
+  recipe_order: 2,
+  recipe_id: 12
+})
+
+Step.create!({
+  description: 'Beat in eggs one at a time and stir in the vanilla and chocolate chips.',
+  recipe_order: 3,
+  recipe_id: 12
+})
+
+Step.create!({
+  description: 'Place spoonfuls of cookie dough onto a greased or lined baking sheet.',
+  recipe_order: 4,
+  recipe_id: 12
+})
+
+Step.create!({
+  description: 'Bake for about 10 minutes, or until the edges are browned.',
+  recipe_order: 5,
+  recipe_id: 12
+})
+
+Step.create!({
+  description: 'Remove from oven and allow cookies to rest for 15 minutes.',
+  recipe_order: 6,
+  recipe_id: 12
+})
+
+# Recipe 13 Steps
+Step.create!({
+  description: 'Blend your apricots into a smooth paste. Once blended, use a fine mesh strainer and strain the blended apricots.',
+  recipe_order: 1,
+  recipe_id: 13
+})
+
+Step.create!({
+  description: 'In a pot, mix your blended apricots and sugar together. Place the pot onto a stovetop over medium low heat and begin to stir the mixture.',
+  recipe_order: 2,
+  recipe_id: 13
+})
+
+Step.create!({
+  description: 'Continue to stir the apricot mixture until it begins to thicken. You can check the thickness of the mixture by placing some onto the back of a spoon and streaking something through. If the mixture does not want form back together, then it is done.',
+  recipe_order: 3,
+  recipe_id: 13
+})
+
+Step.create!({
+  description: 'Pour your newly formed jam into a jar and allow to cool. Enjoy on toast!',
+  recipe_order: 4,
+  recipe_id: 13
+})
+
+# Recipe 14 Steps 
+Step.create!({
+  description: 'Prepare the vinaigrette by mixing the apple cider vinegar, lime juice, olive oil, honey, salt, and ground black pepper together.',
+  recipe_order: 1,
+  recipe_id: 14
+})
+
+Step.create!({
+  description: 'Slightly toast the almonds by putting the almonds in a small skillet over low heat and stirring the almonds frequently until golden brown.',
+  recipe_order: 2,
+  recipe_id: 14
+})
+
+Step.create!({
+  description: 'Add your beets, spinach, and arugula to a large mixing bowl. Toss everything together and then add the vinaigrette. Mix well and top with the almonds.',
+  recipe_order: 3,
+  recipe_id: 14
+})
+
+# Recipe 15 Steps
+Step.create!({
+  description: 'In a large mixing bowl, whisk together the buttermilk, salt, and black pepper together. Place your chicken thighs and drumsticks into the bowl and cover the bowl with plastic wrap. Refrigerate for at least 4 hours.',
+  recipe_order: 1,
+  recipe_id: 15
+})
+
+Step.create!({
+  description: 'Mix the flour with your onion powder, garlic powder, dried oregano, and cayenne pepper.',
+  recipe_order: 2,
+  recipe_id: 15
+})
+
+Step.create!({
+  description: 'After the chicken marinated in your buttermilk, bring a pot of oil to 350°F and remove them from the buttermilk, shaking off the excess each time.',
+  recipe_order: 3,
+  recipe_id: 15
+})
+
+Step.create!({
+  description: 'Working with one piece at a time, place the chicken into the flour mixture and tap away the excess coating.',
+  recipe_order: 4,
+  recipe_id: 15
+})
+
+Step.create!({
+  description: 'When your oil is at 350°F, carefully place your breaded chicken in one at a time. Try not to fry too many pieces at once, as this will drop the temperature of your oil and cause cooking times to be longer. Fry each piece for about 15 minutes each, ensuring that each piece reaches 165°F internally.',
+  recipe_order: 5,
+  recipe_id: 15
+})
+
+Step.create!({
+  description: 'Once golden brown and cooked, place onto paper towels or on a rack to drain off excess oil. Let rest and cool for at least 10 minutes before serving.',
+  recipe_order: 6,
+  recipe_id: 15
+})
+
+# Recipe 16 Steps
+Step.create!({
+  description: 'In a pot, bring a large amount of hot water to a boil. Once at a boil, cook your rice noodles according to the package. Once cooked, drain the water and rinse the noodles with cold water to stop them from cooking.',
+  recipe_order: 1,
+  recipe_id: 16
+})
+
+Step.create!({
+  description: 'In another pot of boiling water, cook your shrimp. Once cooked, place the shrimps in ice water to stop the cooking process. Butterfly each of the shrimps.',
+  recipe_order: 2,
+  recipe_id: 16
+})
+
+Step.create!({
+  description: 'In a dish large enough to fit the rice paper, add cool water to fill it.',
+  recipe_order: 3,
+  recipe_id: 16
+})
+
+Step.create!({
+  description: 'Take a sheet of rice paper and dip it into the cold water. Leave it in the water for about 5 seconds. As you continue to work with the other toppings, the rice paper will soften even more.',
+  recipe_order: 4,
+  recipe_id: 16
+})
+
+Step.create!({
+  description: 'Lay your wet rice paper on a flat surface. Add a lettuce leaf over the bottom of the rice paper. Place some rice noodles and bean sprouts on top.',
+  recipe_order: 5,
+  recipe_id: 16
+})
+
+Step.create!({
+  description: 'Roll the rice paper up halfway, folding in the sides as you go up.',
+  recipe_order: 6,
+  recipe_id: 16
+})
+
+Step.create!({
+  description: 'At the crease, place 2 shrimp halves down. Add some mint and cilantro as well and continue to roll the spring roll tight.',
+  recipe_order: 7,
+  recipe_id: 16
+})
+
+Step.create!({
+  description: 'Serve with peanut sauce.',
+  recipe_order: 8,
+  recipe_id: 16
+})
+
+# Recipe 17 Steps
+Step.create!({
+  description: 'Mince up your rehydrated wood ear mushrooms.',
+  recipe_order: 1,
+  recipe_id: 17
+})
+
+Step.create!({
+  description: 'In a large mixing bowl, add all the ingredients together and mix well.',
+  recipe_order: 2,
+  recipe_id: 17
+})
+
+Step.create!({
+  description: 'Open your pack of ready to use wonton wrappers. Using a teaspoon, place a bit of the meat mixture into the middle of the wrapper. Take all the sides together and scrunch them up into one point. Continue until filling or wrappers have been used up.',
+  recipe_order: 3,
+  recipe_id: 17
+})
+
+Step.create!({
+  description: 'Bring a pot of water to a boil. Add the wontons made to the pot and cook. When they begin to float, they are ready to remove and serve hot. If you have too much, store some in the freezer in ziploc bags.',
+  recipe_order: 4,
+  recipe_id: 17
+})
+
+# Recipe 18 Steps
+Step.create!({
+  description: 'Preheat the oven to 350°F.',
+  recipe_order: 1,
+  recipe_id: 18
+})
+
+Step.create!({
+  description: 'In a large mixing bowl, mix your butter and sugar together until the mixture becomes light and fluffy.  once ready, add your eggs and vanilla and mix for 2 more minutes.',
+  recipe_order: 2,
+  recipe_id: 18
+})
+
+Step.create!({
+  description: 'Carefully mix in your flour, cream of tartar, baking soda, and salt until combined.',
+  recipe_order: 3,
+  recipe_id: 18
+})
+
+Step.create!({
+  description: 'In a small bowl, mix your sugar and cinnamon together.',
+  recipe_order: 4,
+  recipe_id: 18
+})
+
+Step.create!({
+  description: 'Using your hands, take small amounts of dough and roll them into balls. Coat each of these dough balls in your cinnamon sugar mixture and place them onto a parchment paper lined baking sheet.',
+  recipe_order: 5,
+  recipe_id: 18
+})
+
+Step.create!({
+  description: 'When the oven reaches 350°F, place your baking sheet inside and bake for 9 - 10 minutes. Once cooked, remove from oven and let cool on the baking sheet for at least 15 minutes.',
+  recipe_order: 6,
+  recipe_id: 18
+})
+
+# Recipe 19 Steps
+Step.create!({
+  description: 'Remove the rib roast from its packaging and let it come to room temperature. This will take about 30 minutes. Preheat your oven to 450°F.',
+  recipe_order: 1,
+  recipe_id: 19
+})
+
+Step.create!({
+  description: 'Pat the rib roast dry, then coat generously with your salt and pepper. Make sure to cover as much of the rib roast as possible.',
+  recipe_order: 2,
+  recipe_id: 19
+})
+
+Step.create!({
+  description: 'Once the oven has come to temperature, place your rib roast on a large baking tray. If you have an oven safe thermometer, stick it into the center of the meat now. Else, place the rib roast in the oven.',
+  recipe_order: 3,
+  recipe_id: 19
+})
+
+Step.create!({
+  description: 'After 30 minutes, drop the oven temperature from 450°F to 350°F and continue to cook for an hour and 30 minutes, or until your desired internal temperature is reached. Medium rare is at 110°, medium is at 120°, medium well at 130°F and well at 140°F.',
+  recipe_order: 4,
+  recipe_id: 19
+})
+
+Step.create!({
+  description: 'Once the appropriate internal temperature has been reached, remove from the oven and add your rosemary on top. Cover with foil and let rest for at least 30 minutes.',
+  recipe_order: 5,
+  recipe_id: 19
+})
+
+Step.create!({
+  description: 'Once enough time has passed, remove foil, carve, and serve.',
+  recipe_order: 6,
+  recipe_id: 19
+})
+
+# Recipe 20 Steps 
+Step.create!({
+  description: 'Mix your kansui or baked baking soda and salt into your water.',
+  recipe_order: 1,
+  recipe_id: 20
+})
+
+Step.create!({
+  description: 'Add your water to your flour and mix well. Knead everything together. If after some kneading the flour does not want to clump up together, add water, but add only a little bit. This goal is to get a firm yet bouncy dough.',
+  recipe_order: 2,
+  recipe_id: 20
+})
+
+Step.create!({
+  description: 'After your dough has been kneaded and all the flour has formed into one mass, cover with plastic wrap and let rest for at least 30 minutes.',
+  recipe_order: 3,
+  recipe_id: 20
+})
+
+Step.create!({
+  description: 'After 30 minutes have passed, remove the dough from the bowl and portion out into 4 equal pieces. ',
+  recipe_order: 4,
+  recipe_id: 20
+})
+
+Step.create!({
+  description: 'Take one piece and flatten it out as much as you can. If you have a dough roller and cutter, use that to flatten it out to your desired thickness and cut the noodles into individual strands.',
+  recipe_order: 5,
+  recipe_id: 20
+})
+
+Step.create!({
+  description: 'If you do not own one, roll the dough out as thin as you can and dust the entire surface with more flour. Fold the dough upon itself, dusting the dough as you fold. Once folded, carefully cut individual strands of noodles out.',
+  recipe_order: 6,
+  recipe_id: 20
+})
+
+Step.create!({
+  description: 'Once the noodles have been cut, dust with more flour to ensure no noodles stick to one another. Save these noodles in the freezer or boil them right away to eat.',
+  recipe_order: 7,
+  recipe_id: 20
+})
+
 # Reviews #######################################
 
 Review.create!({
@@ -1259,4 +2090,277 @@ Review.create!({
   rating: 4,
   recipe_id: 10,
   user_id: 6,
+})
+
+Review.create!({
+  body: 'Light, fluffy, and absolutely delicious!',
+  rating: 5,
+  recipe_id: 11,
+  user_id: 2
+})
+
+Review.create!({
+  body: 'Tasted incredible! Had to make this a second time.',
+  rating: 5,
+  recipe_id: 11,
+  user_id: 7 
+})
+
+Review.create!({
+  body: 'Make it red like beets to be even tastier.',
+  rating: 4,
+  recipe_id: 11,
+  user_id: 3
+})
+
+Review.create!({
+  body: 'Everything about this is simply delicious!',
+  rating: 5,
+  recipe_id: 11,
+  user_id: 5
+})
+
+Review.create!({
+  body: 'An incredibly light yet flavorful dessert to end any meal.',
+  rating: 5,
+  recipe_id: 11,
+  user_id: 4
+})
+
+Review.create!({
+  body: "Could've been a tiny bit sweeter.",
+  rating: 3,
+  recipe_id: 12,
+  user_id: 6
+})
+
+Review.create!({
+  body: 'Even without protein, this is delicious.',
+  rating: 5,
+  recipe_id: 12,
+  user_id: 8
+})
+
+Review.create!({
+  body: 'Maybe add some other toppings.',
+  rating: 4,
+  recipe_id: 12,
+  user_id: 2
+})
+
+Review.create!({
+  body: 'Tasty!',
+  rating: 4,
+  recipe_id: 12,
+  user_id: 5
+})
+
+Review.create!({
+  body: 'Sweet, simple, and great for storing!',
+  rating: 5,
+  recipe_id: 13,
+  user_id: 1
+})
+
+Review.create!({
+  body: 'Needed some sour notes, as it was slightly too sweet.',
+  rating: 4,
+  recipe_id: 13,
+  user_id: 9
+})
+
+Review.create!({
+  body: 'Delicious with fresh apricots!',
+  rating: 5,
+  recipe_id: 13,
+  user_id: 5
+})
+
+Review.create!({
+  body: 'Fresh picked apricots accentuate this even more.',
+  rating: 4,
+  recipe_id: 13,
+  user_id: 6
+})
+
+Review.create!({
+  body: 'Something was missing..., but still tasty!',
+  rating: 4,
+  recipe_id: 14,
+  user_id: 2
+})
+
+Review.create!({
+  body: 'Delicious! Would make again any day.',
+  rating: 5,
+  recipe_id: 14,
+  user_id: 5
+})
+
+Review.create!({
+  body: "Should've made beet jam instead.",
+  rating: 3,
+  recipe_id: 14,
+  user_id: 7
+})
+
+Review.create!({
+  body: 'Tasty, but needed something the raw beets may have been a bit too much.',
+  rating: 4,
+  recipe_id: 14,
+  user_id: 4
+})
+
+Review.create!({
+  body: 'Absolutely delicious! Could not stop eating it!',
+  rating: 5,
+  recipe_id: 15,
+  user_id: 2
+})
+
+Review.create!({
+  body: 'Better than what mom used to make! No beets needed!',
+  rating: 5,
+  recipe_id: 15,
+  user_id: 3
+})
+
+Review.create!({
+  body: 'Crispy and not dry on the insides! Amazing!',
+  rating: 5,
+  recipe_id: 15,
+  user_id: 4
+})
+
+Review.create!({
+  body: 'Could not stop myself from running to the store to buy ingredients and make this again!',
+  rating: 5,
+  recipe_id: 15,
+  user_id: 5
+})
+
+Review.create!({
+  body: 'Absolutely mouth-wateringly delicious.',
+  rating: 5,
+  recipe_id: 15,
+  user_id: 6
+})
+
+Review.create!({
+  body: 'Refreshing, springy, and a great way to start off any meal.',
+  rating: 5,
+  recipe_id: 16,
+  user_id: 2
+})
+
+Review.create!({
+  body: 'Ate 5 of these without even noticing how many I ate until the deed was done. Will do again.',
+  rating: 5,
+  recipe_id: 16,
+  user_id: 8
+})
+
+Review.create!({
+  body: 'Wish I made more. Absolutely addicting.',
+  rating: 5,
+  recipe_id: 16,
+  user_id: 9
+})
+
+Review.create!({
+  body: 'Just magnificent.',
+  rating: 5,
+  recipe_id: 17,
+  user_id: 4
+})
+
+Review.create!({
+  body: 'The wood ear mushrooms were a strange texture.',
+  rating: 3,
+  recipe_id: 17,
+  user_id: 3
+})
+
+Review.create!({
+  body: 'Could not be any more perfect.',
+  rating: 5,
+  recipe_id: 17,
+  user_id: 2
+})
+
+Review.create!({
+  body: 'Delicious!',
+  rating: 5,
+  recipe_id: 17,
+  user_id: 1
+})
+
+Review.create!({
+  body: 'A light and tasty cookie! ',
+  rating: 4,
+  recipe_id: 18,
+  user_id: 2
+})
+
+Review.create!({
+  body: 'The perfect amount of sweetness and the perfect amount of cinnamon.',
+  rating: 5,
+  recipe_id: 18,
+  user_id: 3
+})
+
+Review.create!({
+  body: 'The cream of tartar caused it to have an extremely bitter taste. Definitely not my fault.',
+  rating: 3,
+  recipe_id: 18,
+  user_id: 8
+})
+
+Review.create!({
+  body: 'Cooked to perfection. Strong on flavor. Make sure to use good quality prime rib!',
+  rating: 5,
+  recipe_id: 19,
+  user_id: 2
+})
+
+Review.create!({
+  body: 'Needs more garlic, but overall, tasty!',
+  rating: 4,
+  recipe_id: 19,
+  user_id: 3
+})
+
+Review.create!({
+  body: 'Could use more spices or herbs to accentuate the flavor of the meat.',
+  rating: 3,
+  recipe_id: 19,
+  user_id: 4
+})
+
+Review.create!({
+  body: 'Roasted it over a campfire instead, absolutely tasty.',
+  rating: 5,
+  recipe_id: 19,
+  user_id: 6
+})
+
+Review.create!({
+  body: 'Could not stop making these for weeks.',
+  rating: 5,
+  recipe_id: 20,
+  user_id: 7
+})
+
+Review.create!({
+  body: 'Was delicious in my homemade broth!',
+  rating: 5,
+  recipe_id: 20,
+  user_id: 8
+})
+
+Review.create!({
+  body: 'Tasty, springy, and cooks well even after freezing!',
+  rating: 5,
+  recipe_id: 20,
+  user_id: 9
 })
